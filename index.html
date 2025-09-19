@@ -4,70 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ma Galerie d'Images (280 fichiers)</title>
- <style>
-    body {
-      font-family: sans-serif;
-      margin: 20px;
-      background-color: #f0f2f5;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #333;
-    }
-    /* La grille responsive */
-    .gallerie {
-      display: grid;
-      /* Colonnes s'ajustent pour que chaque élément ait au moins 250px de largeur */
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 15px;
-      padding: 10px;
-    }
-    /* Conteneur individuel pour garantir un ratio 1:1 (carré) */
-    .image-container {
-      position: relative;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      /* Crée un ratio 1:1 pour les conteneurs */
-      padding-top: 100%;
-      height: 0;
-      /* Assure que le conteneur est prêt pour le z-index au survol */
-      transform: translateZ(0);
-    }
-
-    /* Au survol, on modifie le conteneur pour permettre à l'image de déborder */
-    .image-container:hover {
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      overflow: visible; /* Permet à l'image agrandie de ne pas être coupée */
-      z-index: 10;       /* Place cette tuile au-dessus des autres */
-    }
-
-    /* L'image elle-même */
-    .image-container img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      /* Mode par défaut : couvre le carré */
-      object-fit: cover;
-      display: block;
-      /* Transition pour un effet fluide */
-      transition: transform 0.3s ease, object-fit 0.3s ease;
-      background-color: #fff; /* Pour masquer les parties noires si 'contain' est utilisé */
-    }
-
-    /* RÈGLE MAGIQUE : au survol du conteneur, l'image change pour s'afficher entièrement */
-    .image-container:hover img {
-      /* Change l'ajustement: l'image entière est visible */
-      object-fit: contain;
-
-      /* Agrandissement pour un effet de "pop-out" */
-      transform: scale(1.1);
-    }
-  </style>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background-color: #f0f2f5;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    /* La grille responsive */
+    .gallerie {
+      display: grid;
+      /* Colonnes s'ajustent pour que chaque élément ait au moins 250px de largeur */
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 10px;
+    }
+    /* Conteneur individuel pour garantir un ratio 1:1 (carré) */
+    .image-container {
+      position: relative;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      /* Crée un ratio 1:1 pour les conteneurs */
+      padding-top: 100%;
+      height: 0; 
+    }
+    /* L'image elle-même */
+    .image-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* Assure que l'image couvre le carré sans être étirée, tout en la coupant si nécessaire */
+      object-fit: cover; 
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <h1>Galerie des 280 Fichiers Images</h1>
