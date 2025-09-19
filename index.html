@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Médicis - Portfolio (Mode Débug)</title>
+    <title>Médicis - Portfolio</title>
+
     <style>
         /* Style du corps de la page */
         body {
@@ -27,11 +28,12 @@
         /* Style de la grille de la mosaïque */
         .gallery-grid {
             display: grid;
+            /* Crée des colonnes flexibles (min 250px) pour s'adapter à l'écran */
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
+            gap: 15px; /* Espace entre les images */
             padding: 20px;
-            max-width: 1400px;
-            margin: 0 auto;
+            max-width: 1400px; /* Limite la largeur du contenu */
+            margin: 0 auto; /* Centre la grille */
         }
         /* Conteneur de chaque image */
         .media-item {
@@ -39,20 +41,21 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            aspect-ratio: 1 / 1;
+            aspect-ratio: 1 / 1; /* Force le conteneur à être carré (Mosaïque uniforme) */
         }
-        /* Styles des images à l'intérieur */
+        /* Styles des images à l'intérieur (ciblera le <img> dans la balise <picture>) */
         .media-item img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Assure que l'image couvre l'espace sans se déformer */
             display: block;
+            /* Prépare la transition pour l'effet de zoom */
             transition: transform 0.3s ease;
         }
         /* Effet interactif : Zoom léger au survol (hover) */
         .media-item:hover img {
-            transform: scale(1.05);
-            cursor: pointer;
+            transform: scale(1.05); /* Agrandissement de 5% */
+            cursor: pointer; /* Change le curseur pour indiquer l'interactivité */
         }
         /* Style du pied de page (footer) */
         footer {
@@ -65,41 +68,68 @@
 </head>
 <body>
     <header>
-        <h1>Images de LNA Prototypes (Galerie Portfolio - Version JPG SEULE)</h1>
+        <h1>Images de LNA Prototypes (Galerie Portfolio)</h1>
     </header>
     <main class="gallery-grid">
         <div class="media-item">
-            <img src="./media/2022_MVMA_inscription_gallery-2.jpg" alt="Inscription galerie 2022">
+            <picture>
+                <source srcset="./media/2022_MVMA_inscription_gallery-2.webp" type="image/webp">
+                <img src="./media/2022_MVMA_inscription_gallery-2.jpg" alt="Inscription galerie 2022">
+            </picture>
         </div>
         <div class="media-item">
             <img src="./media/Affiche_2023_FDP_carre_Insta-e1725973409812.jpg" alt="Affiche Instagram 2023">
         </div>
         <div class="media-item">
-            <img src="./media/ambassador4-min-min-min-scaled-1-e1721749371203.jpg" alt="Ambassadeur photo 4">
+            <picture>
+                <source srcset="./media/ambassador4-min-min-min-scaled-1-e1721749371203.webp" type="image/webp">
+                <img src="./media/ambassador4-min-min-min-scaled-1-e1721749371203.jpg" alt="Ambassadeur photo 4">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/ambassador5-min.jpg" alt="Ambassadeur photo 5">
+            <picture>
+                <source srcset="./media/ambassador5-min.webp" type="image/webp">
+                <img src="./media/ambassador5-min.jpg" alt="Ambassadeur photo 5">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/ambassador-min-scaled.jpg" alt="Ambassadeur photo principale">
+            <picture>
+                <source srcset="./media/ambassador-min-scaled.webp" type="image/webp">
+                <img src="./media/ambassador-min-scaled.jpg" alt="Ambassadeur photo principale">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/atout-1-min-1024x692.jpg" alt="Atout principal 1">
+            <picture>
+                <source srcset="./media/atout-1-min-1024x692.webp" type="image/webp">
+                <img src="./media/atout-1-min-1024x692.jpg" alt="Atout principal 1">
+            </picture>
         </div>
         <div class="media-item">
             <img src="./media/avantage-.png" alt="Icône Avantage">
         </div>
         <div class="media-item">
-            <img src="./media/Bail-reel-solidaire-d-activite-pour-les-micro-entreprises-scaled.jpg" alt="Bail réel solidaire pour micro-entreprises">
+            <picture>
+                <source srcset="./media/Bail-reel-solidaire-d-activite-pour-les-micro-entreprises-scaled.webp" type="image/webp">
+                <img src="./media/Bail-reel-solidaire-d-activite-pour-les-micro-entreprises-scaled.jpg" alt="Bail réel solidaire pour micro-entreprises">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/BANNIERE_MEDICIS_PER-MEDICIS-MULTISUPPORT_2025-1020x1024.jpg" alt="Bannière PER Médicis Multisapport 2025">
+            <picture>
+                <source srcset="./media/BANNIERE_MEDICIS_PER-MEDICIS-MULTISUPPORT_2025-1020x1024.webp" type="image/webp">
+                <img src="./media/BANNIERE_MEDICIS_PER-MEDICIS-MULTISUPPORT_2025-1020x1024.jpg" alt="Bannière PER Médicis Multisapport 2025">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/bg-footerQuestion.jpg" alt="Fond de pied de page">
+            <picture>
+                <source srcset="./media/bg-footerQuestion.webp" type="image/webp">
+                <img src="./media/bg-footerQuestion.jpg" alt="Fond de pied de page">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/bgForm (1).jpg" alt="Fond de formulaire">
+            <picture>
+                <source srcset="./media/bgForm (1).webp" type="image/webp">
+                <img src="./media/bgForm (1).jpg" alt="Fond de formulaire">
+            </picture>
         </div>
         <div class="media-item">
             <img src="./media/BOUCHER2-1024x800 (1).jpg" alt="Photo d'un boucher">
@@ -114,7 +144,10 @@
             <img src="./media/Cancer-logo-1-1024x561.png" alt="Logo Cancer">
         </div>
         <div class="media-item">
-            <img src="./media/Capture-decran-2024-07-04-104343.jpg" alt="Capture d'écran 1">
+            <picture>
+                <source srcset="./media/Capture-decran-2024-07-04-104343.webp" type="image/webp">
+                <img src="./media/Capture-decran-2024-07-04-104343.jpg" alt="Capture d'écran 1">
+            </picture>
         </div>
         <div class="media-item">
             <img src="./media/Capture-decran-2024-07-24-165536-e1721832998137.png" alt="Capture d'écran 2">
@@ -129,321 +162,1593 @@
             <img src="./media/conseil-2023-scaled-e1725972551523.jpg" alt="Photo de conseil 2023">
         </div>
         <div class="media-item">
-            <img src="./media/croissance-durable.jpg" alt="Icône de croissance durable">
+            <picture>
+                <source srcset="./media/croissance-durable.webp" type="image/webp">
+                <img src="./media/croissance-durable.jpg" alt="Icône de croissance durable">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/Croissance.jpg" alt="Icône de croissance">
+            <picture>
+                <source srcset="./media/Croissance.webp" type="image/webp">
+                <img src="./media/Croissance.jpg" alt="Icône de croissance">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC03487.jpg" alt="Photo de galerie DSC03487">
+            <picture>
+                <source srcset="./media/DSC03487.webp" type="image/webp">
+                <img src="./media/DSC03487.jpg" alt="Photo de galerie DSC03487">
+            </picture>
         </div>
         <div class="media-item">
             <img src="./media/DSC03898full.jpg" alt="Photo de galerie DSC03898">
         </div>
         <div class="media-item">
-            <img src="./media/DSC04068.jpg" alt="Photo de galerie DSC04068">
+            <picture>
+                <source srcset="./media/DSC04068.webp" type="image/webp">
+                <img src="./media/DSC04068.jpg" alt="Photo de galerie DSC04068">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04077.jpg" alt="Photo de galerie DSC04077">
+            <picture>
+                <source srcset="./media/DSC04077.webp" type="image/webp">
+                <img src="./media/DSC04077.jpg" alt="Photo de galerie DSC04077">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04179.jpg" alt="Photo de galerie DSC04179">
+            <picture>
+                <source srcset="./media/DSC04179.webp" type="image/webp">
+                <img src="./media/DSC04179.jpg" alt="Photo de galerie DSC04179">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04207.jpg" alt="Photo de galerie DSC04207">
+            <picture>
+                <source srcset="./media/DSC04207.webp" type="image/webp">
+                <img src="./media/DSC04207.jpg" alt="Photo de galerie DSC04207">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04212.jpg" alt="Photo de galerie DSC04212">
+            <picture>
+                <source srcset="./media/DSC04212.webp" type="image/webp">
+                <img src="./media/DSC04212.jpg" alt="Photo de galerie DSC04212">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04222.jpg" alt="Photo de galerie DSC04222">
+            <picture>
+                <source srcset="./media/DSC04222.webp" type="image/webp">
+                <img src="./media/DSC04222.jpg" alt="Photo de galerie DSC04222">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04358.jpg" alt="Photo de galerie DSC04358">
+            <picture>
+                <source srcset="./media/DSC04358.webp" type="image/webp">
+                <img src="./media/DSC04358.jpg" alt="Photo de galerie DSC04358">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04374.jpg" alt="Photo de galerie DSC04374">
+            <picture>
+                <source srcset="./media/DSC04374.webp" type="image/webp">
+                <img src="./media/DSC04374.jpg" alt="Photo de galerie DSC04374">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04456.jpg" alt="Photo de galerie DSC04456">
+            <picture>
+                <source srcset="./media/DSC04456.webp" type="image/webp">
+                <img src="./media/DSC04456.jpg" alt="Photo de galerie DSC04456">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04523.jpg" alt="Photo de galerie DSC04523">
+            <picture>
+                <source srcset="./media/DSC04523.webp" type="image/webp">
+                <img src="./media/DSC04523.jpg" alt="Photo de galerie DSC04523">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04576.jpg" alt="Photo de galerie DSC04576">
+            <picture>
+                <source srcset="./media/DSC04576.webp" type="image/webp">
+                <img src="./media/DSC04576.jpg" alt="Photo de galerie DSC04576">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04620.jpg" alt="Photo de galerie DSC04620">
+            <picture>
+                <source srcset="./media/DSC04620.webp" type="image/webp">
+                <img src="./media/DSC04620.jpg" alt="Photo de galerie DSC04620">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04639.jpg" alt="Photo de galerie DSC04639">
+            <picture>
+                <source srcset="./media/DSC04639.webp" type="image/webp">
+                <img src="./media/DSC04639.jpg" alt="Photo de galerie DSC04639">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04670.jpg" alt="Photo de galerie DSC04670">
+            <picture>
+                <source srcset="./media/DSC04670.webp" type="image/webp">
+                <img src="./media/DSC04670.jpg" alt="Photo de galerie DSC04670">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04732.jpg" alt="Photo de galerie DSC04732">
+            <picture>
+                <source srcset="./media/DSC04732.webp" type="image/webp">
+                <img src="./media/DSC04732.jpg" alt="Photo de galerie DSC04732">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04803.jpg" alt="Photo de galerie DSC04803">
+            <picture>
+                <source srcset="./media/DSC04803.webp" type="image/webp">
+                <img src="./media/DSC04803.jpg" alt="Photo de galerie DSC04803">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04820.jpg" alt="Photo de galerie DSC04820">
+            <picture>
+                <source srcset="./media/DSC04820.webp" type="image/webp">
+                <img src="./media/DSC04820.jpg" alt="Photo de galerie DSC04820">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04907.jpg" alt="Photo de galerie DSC04907">
+            <picture>
+                <source srcset="./media/DSC04907.webp" type="image/webp">
+                <img src="./media/DSC04907.jpg" alt="Photo de galerie DSC04907">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC04944.jpg" alt="Photo de galerie DSC04944">
+            <picture>
+                <source srcset="./media/DSC04944.webp" type="image/webp">
+                <img src="./media/DSC04944.jpg" alt="Photo de galerie DSC04944">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05007.jpg" alt="Photo de galerie DSC05007">
+            <picture>
+                <source srcset="./media/DSC05007.webp" type="image/webp">
+                <img src="./media/DSC05007.jpg" alt="Photo de galerie DSC05007">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05047.jpg" alt="Photo de galerie DSC05047">
+            <picture>
+                <source srcset="./media/DSC05047.webp" type="image/webp">
+                <img src="./media/DSC05047.jpg" alt="Photo de galerie DSC05047">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05089.jpg" alt="Photo de galerie DSC05089">
+            <picture>
+                <source srcset="./media/DSC05089.webp" type="image/webp">
+                <img src="./media/DSC05089.jpg" alt="Photo de galerie DSC05089">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05156.jpg" alt="Photo de galerie DSC05156">
+            <picture>
+                <source srcset="./media/DSC05156.webp" type="image/webp">
+                <img src="./media/DSC05156.jpg" alt="Photo de galerie DSC05156">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05232.jpg" alt="Photo de galerie DSC05232">
+            <picture>
+                <source srcset="./media/DSC05232.webp" type="image/webp">
+                <img src="./media/DSC05232.jpg" alt="Photo de galerie DSC05232">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05256.jpg" alt="Photo de galerie DSC05256">
+            <picture>
+                <source srcset="./media/DSC05256.webp" type="image/webp">
+                <img src="./media/DSC05256.jpg" alt="Photo de galerie DSC05256">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05282.jpg" alt="Photo de galerie DSC05282">
+            <picture>
+                <source srcset="./media/DSC05282.webp" type="image/webp">
+                <img src="./media/DSC05282.jpg" alt="Photo de galerie DSC05282">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05352.jpg" alt="Photo de galerie DSC05352">
+            <picture>
+                <source srcset="./media/DSC05352.webp" type="image/webp">
+                <img src="./media/DSC05352.jpg" alt="Photo de galerie DSC05352">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05391.jpg" alt="Photo de galerie DSC05391">
+            <picture>
+                <source srcset="./media/DSC05391.webp" type="image/webp">
+                <img src="./media/DSC05391.jpg" alt="Photo de galerie DSC05391">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05417.jpg" alt="Photo de galerie DSC05417">
+            <picture>
+                <source srcset="./media/DSC05417.webp" type="image/webp">
+                <img src="./media/DSC05417.jpg" alt="Photo de galerie DSC05417">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05445.jpg" alt="Photo de galerie DSC05445">
+            <picture>
+                <source srcset="./media/DSC05445.webp" type="image/webp">
+                <img src="./media/DSC05445.jpg" alt="Photo de galerie DSC05445">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05476.jpg" alt="Photo de galerie DSC05476">
+            <picture>
+                <source srcset="./media/DSC05476.webp" type="image/webp">
+                <img src="./media/DSC05476.jpg" alt="Photo de galerie DSC05476">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05504.jpg" alt="Photo de galerie DSC05504">
+            <picture>
+                <source srcset="./media/DSC05504.webp" type="image/webp">
+                <img src="./media/DSC05504.jpg" alt="Photo de galerie DSC05504">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05537.jpg" alt="Photo de galerie DSC05537">
+            <picture>
+                <source srcset="./media/DSC05537.webp" type="image/webp">
+                <img src="./media/DSC05537.jpg" alt="Photo de galerie DSC05537">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05622.jpg" alt="Photo de galerie DSC05622">
+            <picture>
+                <source srcset="./media/DSC05622.webp" type="image/webp">
+                <img src="./media/DSC05622.jpg" alt="Photo de galerie DSC05622">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05658.jpg" alt="Photo de galerie DSC05658">
+            <picture>
+                <source srcset="./media/DSC05658.webp" type="image/webp">
+                <img src="./media/DSC05658.jpg" alt="Photo de galerie DSC05658">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05721.jpg" alt="Photo de galerie DSC05721">
+            <picture>
+                <source srcset="./media/DSC05721.webp" type="image/webp">
+                <img src="./media/DSC05721.jpg" alt="Photo de galerie DSC05721">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05763.jpg" alt="Photo de galerie DSC05763">
+            <picture>
+                <source srcset="./media/DSC05763.webp" type="image/webp">
+                <img src="./media/DSC05763.jpg" alt="Photo de galerie DSC05763">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05809.jpg" alt="Photo de galerie DSC05809">
+            <picture>
+                <source srcset="./media/DSC05809.webp" type="image/webp">
+                <img src="./media/DSC05809.jpg" alt="Photo de galerie DSC05809">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05834.jpg" alt="Photo de galerie DSC05834">
+            <picture>
+                <source srcset="./media/DSC05834.webp" type="image/webp">
+                <img src="./media/DSC05834.jpg" alt="Photo de galerie DSC05834">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05898.jpg" alt="Photo de galerie DSC05898">
+            <picture>
+                <source srcset="./media/DSC05898.webp" type="image/webp">
+                <img src="./media/DSC05898.jpg" alt="Photo de galerie DSC05898">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05934.jpg" alt="Photo de galerie DSC05934">
+            <picture>
+                <source srcset="./media/DSC05934.webp" type="image/webp">
+                <img src="./media/DSC05934.jpg" alt="Photo de galerie DSC05934">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC05963.jpg" alt="Photo de galerie DSC05963">
+            <picture>
+                <source srcset="./media/DSC05963.webp" type="image/webp">
+                <img src="./media/DSC05963.jpg" alt="Photo de galerie DSC05963">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06013.jpg" alt="Photo de galerie DSC06013">
+            <picture>
+                <source srcset="./media/DSC06013.webp" type="image/webp">
+                <img src="./media/DSC06013.jpg" alt="Photo de galerie DSC06013">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06044.jpg" alt="Photo de galerie DSC06044">
+            <picture>
+                <source srcset="./media/DSC06044.webp" type="image/webp">
+                <img src="./media/DSC06044.jpg" alt="Photo de galerie DSC06044">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06079.jpg" alt="Photo de galerie DSC06079">
+            <picture>
+                <source srcset="./media/DSC06079.webp" type="image/webp">
+                <img src="./media/DSC06079.jpg" alt="Photo de galerie DSC06079">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06114.jpg" alt="Photo de galerie DSC06114">
+            <picture>
+                <source srcset="./media/DSC06114.webp" type="image/webp">
+                <img src="./media/DSC06114.jpg" alt="Photo de galerie DSC06114">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06173.jpg" alt="Photo de galerie DSC06173">
+            <picture>
+                <source srcset="./media/DSC06173.webp" type="image/webp">
+                <img src="./media/DSC06173.jpg" alt="Photo de galerie DSC06173">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06206.jpg" alt="Photo de galerie DSC06206">
+            <picture>
+                <source srcset="./media/DSC06206.webp" type="image/webp">
+                <img src="./media/DSC06206.jpg" alt="Photo de galerie DSC06206">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06240.jpg" alt="Photo de galerie DSC06240">
+            <picture>
+                <source srcset="./media/DSC06240.webp" type="image/webp">
+                <img src="./media/DSC06240.jpg" alt="Photo de galerie DSC06240">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06277.jpg" alt="Photo de galerie DSC06277">
+            <picture>
+                <source srcset="./media/DSC06277.webp" type="image/webp">
+                <img src="./media/DSC06277.jpg" alt="Photo de galerie DSC06277">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06316.jpg" alt="Photo de galerie DSC06316">
+            <picture>
+                <source srcset="./media/DSC06316.webp" type="image/webp">
+                <img src="./media/DSC06316.jpg" alt="Photo de galerie DSC06316">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06346.jpg" alt="Photo de galerie DSC06346">
+            <picture>
+                <source srcset="./media/DSC06346.webp" type="image/webp">
+                <img src="./media/DSC06346.jpg" alt="Photo de galerie DSC06346">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06376.jpg" alt="Photo de galerie DSC06376">
+            <picture>
+                <source srcset="./media/DSC06376.webp" type="image/webp">
+                <img src="./media/DSC06376.jpg" alt="Photo de galerie DSC06376">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06406.jpg" alt="Photo de galerie DSC06406">
+            <picture>
+                <source srcset="./media/DSC06406.webp" type="image/webp">
+                <img src="./media/DSC06406.jpg" alt="Photo de galerie DSC06406">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06422.jpg" alt="Photo de galerie DSC06422">
+            <picture>
+                <source srcset="./media/DSC06422.webp" type="image/webp">
+                <img src="./media/DSC06422.jpg" alt="Photo de galerie DSC06422">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06456.jpg" alt="Photo de galerie DSC06456">
+            <picture>
+                <source srcset="./media/DSC06456.webp" type="image/webp">
+                <img src="./media/DSC06456.jpg" alt="Photo de galerie DSC06456">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06509.jpg" alt="Photo de galerie DSC06509">
+            <picture>
+                <source srcset="./media/DSC06509.webp" type="image/webp">
+                <img src="./media/DSC06509.jpg" alt="Photo de galerie DSC06509">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06554.jpg" alt="Photo de galerie DSC06554">
+            <picture>
+                <source srcset="./media/DSC06554.webp" type="image/webp">
+                <img src="./media/DSC06554.jpg" alt="Photo de galerie DSC06554">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06583.jpg" alt="Photo de galerie DSC06583">
+            <picture>
+                <source srcset="./media/DSC06583.webp" type="image/webp">
+                <img src="./media/DSC06583.jpg" alt="Photo de galerie DSC06583">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06604.jpg" alt="Photo de galerie DSC06604">
+            <picture>
+                <source srcset="./media/DSC06604.webp" type="image/webp">
+                <img src="./media/DSC06604.jpg" alt="Photo de galerie DSC06604">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06626.jpg" alt="Photo de galerie DSC06626">
+            <picture>
+                <source srcset="./media/DSC06626.webp" type="image/webp">
+                <img src="./media/DSC06626.jpg" alt="Photo de galerie DSC06626">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06655.jpg" alt="Photo de galerie DSC06655">
+            <picture>
+                <source srcset="./media/DSC06655.webp" type="image/webp">
+                <img src="./media/DSC06655.jpg" alt="Photo de galerie DSC06655">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06674.jpg" alt="Photo de galerie DSC06674">
+            <picture>
+                <source srcset="./media/DSC06674.webp" type="image/webp">
+                <img src="./media/DSC06674.jpg" alt="Photo de galerie DSC06674">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06703.jpg" alt="Photo de galerie DSC06703">
+            <picture>
+                <source srcset="./media/DSC06703.webp" type="image/webp">
+                <img src="./media/DSC06703.jpg" alt="Photo de galerie DSC06703">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06740.jpg" alt="Photo de galerie DSC06740">
+            <picture>
+                <source srcset="./media/DSC06740.webp" type="image/webp">
+                <img src="./media/DSC06740.jpg" alt="Photo de galerie DSC06740">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06771.jpg" alt="Photo de galerie DSC06771">
+            <picture>
+                <source srcset="./media/DSC06771.webp" type="image/webp">
+                <img src="./media/DSC06771.jpg" alt="Photo de galerie DSC06771">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06803.jpg" alt="Photo de galerie DSC06803">
+            <picture>
+                <source srcset="./media/DSC06803.webp" type="image/webp">
+                <img src="./media/DSC06803.jpg" alt="Photo de galerie DSC06803">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06836.jpg" alt="Photo de galerie DSC06836">
+            <picture>
+                <source srcset="./media/DSC06836.webp" type="image/webp">
+                <img src="./media/DSC06836.jpg" alt="Photo de galerie DSC06836">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06866.jpg" alt="Photo de galerie DSC06866">
+            <picture>
+                <source srcset="./media/DSC06866.webp" type="image/webp">
+                <img src="./media/DSC06866.jpg" alt="Photo de galerie DSC06866">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06898.jpg" alt="Photo de galerie DSC06898">
+            <picture>
+                <source srcset="./media/DSC06898.webp" type="image/webp">
+                <img src="./media/DSC06898.jpg" alt="Photo de galerie DSC06898">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06932.jpg" alt="Photo de galerie DSC06932">
+            <picture>
+                <source srcset="./media/DSC06932.webp" type="image/webp">
+                <img src="./media/DSC06932.jpg" alt="Photo de galerie DSC06932">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06967.jpg" alt="Photo de galerie DSC06967">
+            <picture>
+                <source srcset="./media/DSC06967.webp" type="image/webp">
+                <img src="./media/DSC06967.jpg" alt="Photo de galerie DSC06967">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC06992.jpg" alt="Photo de galerie DSC06992">
+            <picture>
+                <source srcset="./media/DSC06992.webp" type="image/webp">
+                <img src="./media/DSC06992.jpg" alt="Photo de galerie DSC06992">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07018.jpg" alt="Photo de galerie DSC07018">
+            <picture>
+                <source srcset="./media/DSC07018.webp" type="image/webp">
+                <img src="./media/DSC07018.jpg" alt="Photo de galerie DSC07018">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07049.jpg" alt="Photo de galerie DSC07049">
+            <picture>
+                <source srcset="./media/DSC07049.webp" type="image/webp">
+                <img src="./media/DSC07049.jpg" alt="Photo de galerie DSC07049">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07079.jpg" alt="Photo de galerie DSC07079">
+            <picture>
+                <source srcset="./media/DSC07079.webp" type="image/webp">
+                <img src="./media/DSC07079.jpg" alt="Photo de galerie DSC07079">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07122.jpg" alt="Photo de galerie DSC07122">
+            <picture>
+                <source srcset="./media/DSC07122.webp" type="image/webp">
+                <img src="./media/DSC07122.jpg" alt="Photo de galerie DSC07122">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07166.jpg" alt="Photo de galerie DSC07166">
+            <picture>
+                <source srcset="./media/DSC07166.webp" type="image/webp">
+                <img src="./media/DSC07166.jpg" alt="Photo de galerie DSC07166">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07198.jpg" alt="Photo de galerie DSC07198">
+            <picture>
+                <source srcset="./media/DSC07198.webp" type="image/webp">
+                <img src="./media/DSC07198.jpg" alt="Photo de galerie DSC07198">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07223.jpg" alt="Photo de galerie DSC07223">
+            <picture>
+                <source srcset="./media/DSC07223.webp" type="image/webp">
+                <img src="./media/DSC07223.jpg" alt="Photo de galerie DSC07223">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07248.jpg" alt="Photo de galerie DSC07248">
+            <picture>
+                <source srcset="./media/DSC07248.webp" type="image/webp">
+                <img src="./media/DSC07248.jpg" alt="Photo de galerie DSC07248">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07283.jpg" alt="Photo de galerie DSC07283">
+            <picture>
+                <source srcset="./media/DSC07283.webp" type="image/webp">
+                <img src="./media/DSC07283.jpg" alt="Photo de galerie DSC07283">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07315.jpg" alt="Photo de galerie DSC07315">
+            <picture>
+                <source srcset="./media/DSC07315.webp" type="image/webp">
+                <img src="./media/DSC07315.jpg" alt="Photo de galerie DSC07315">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07361.jpg" alt="Photo de galerie DSC07361">
+            <picture>
+                <source srcset="./media/DSC07361.webp" type="image/webp">
+                <img src="./media/DSC07361.jpg" alt="Photo de galerie DSC07361">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07400.jpg" alt="Photo de galerie DSC07400">
+            <picture>
+                <source srcset="./media/DSC07400.webp" type="image/webp">
+                <img src="./media/DSC07400.jpg" alt="Photo de galerie DSC07400">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07455.jpg" alt="Photo de galerie DSC07455">
+            <picture>
+                <source srcset="./media/DSC07455.webp" type="image/webp">
+                <img src="./media/DSC07455.jpg" alt="Photo de galerie DSC07455">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07504.jpg" alt="Photo de galerie DSC07504">
+            <picture>
+                <source srcset="./media/DSC07504.webp" type="image/webp">
+                <img src="./media/DSC07504.jpg" alt="Photo de galerie DSC07504">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07548.jpg" alt="Photo de galerie DSC07548">
+            <picture>
+                <source srcset="./media/DSC07548.webp" type="image/webp">
+                <img src="./media/DSC07548.jpg" alt="Photo de galerie DSC07548">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07590.jpg" alt="Photo de galerie DSC07590">
+            <picture>
+                <source srcset="./media/DSC07590.webp" type="image/webp">
+                <img src="./media/DSC07590.jpg" alt="Photo de galerie DSC07590">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07629.jpg" alt="Photo de galerie DSC07629">
+            <picture>
+                <source srcset="./media/DSC07629.webp" type="image/webp">
+                <img src="./media/DSC07629.jpg" alt="Photo de galerie DSC07629">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07671.jpg" alt="Photo de galerie DSC07671">
+            <picture>
+                <source srcset="./media/DSC07671.webp" type="image/webp">
+                <img src="./media/DSC07671.jpg" alt="Photo de galerie DSC07671">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07705.jpg" alt="Photo de galerie DSC07705">
+            <picture>
+                <source srcset="./media/DSC07705.webp" type="image/webp">
+                <img src="./media/DSC07705.jpg" alt="Photo de galerie DSC07705">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07739.jpg" alt="Photo de galerie DSC07739">
+            <picture>
+                <source srcset="./media/DSC07739.webp" type="image/webp">
+                <img src="./media/DSC07739.jpg" alt="Photo de galerie DSC07739">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07775.jpg" alt="Photo de galerie DSC07775">
+            <picture>
+                <source srcset="./media/DSC07775.webp" type="image/webp">
+                <img src="./media/DSC07775.jpg" alt="Photo de galerie DSC07775">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07817.jpg" alt="Photo de galerie DSC07817">
+            <picture>
+                <source srcset="./media/DSC07817.webp" type="image/webp">
+                <img src="./media/DSC07817.jpg" alt="Photo de galerie DSC07817">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07849.jpg" alt="Photo de galerie DSC07849">
+            <picture>
+                <source srcset="./media/DSC07849.webp" type="image/webp">
+                <img src="./media/DSC07849.jpg" alt="Photo de galerie DSC07849">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07886.jpg" alt="Photo de galerie DSC07886">
+            <picture>
+                <source srcset="./media/DSC07886.webp" type="image/webp">
+                <img src="./media/DSC07886.jpg" alt="Photo de galerie DSC07886">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07936.jpg" alt="Photo de galerie DSC07936">
+            <picture>
+                <source srcset="./media/DSC07936.webp" type="image/webp">
+                <img src="./media/DSC07936.jpg" alt="Photo de galerie DSC07936">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC07971.jpg" alt="Photo de galerie DSC07971">
+            <picture>
+                <source srcset="./media/DSC07971.webp" type="image/webp">
+                <img src="./media/DSC07971.jpg" alt="Photo de galerie DSC07971">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC08006.jpg" alt="Photo de galerie DSC08006">
+            <picture>
+                <source srcset="./media/DSC08006.webp" type="image/webp">
+                <img src="./media/DSC08006.jpg" alt="Photo de galerie DSC08006">
+            </picture>
         </div>
         <div class="media-item">
-            <img src="./media/DSC08035.jpg" alt="Photo de galerie DSC08035">
+            <picture>
+                <source srcset="./media/DSC08035.webp" type="image/webp">
+                <img src="./media/DSC08035.jpg" alt="Photo de galerie DSC08035">
+            </picture>
         </div>
-        </main>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/conseils-2-scaled.webp" type="image/webp">
+                <img src="./media/conseils-2-scaled.jpg" alt="Conseils 2">
+            </picture>
+        </div>
+
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/D52-Bandeau-LinkedIn-V5.webp" type="image/webp">
+                <img src="./media/D52-Bandeau-LinkedIn-V5.jpg" alt="Bandeau LinkedIn V5">
+            </picture>
+        </div>
+
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/D52-Bandeau-LinkedIn-V6-1024x512.webp" type="image/webp">
+                <img src="./media/D52-Bandeau-LinkedIn-V6-1024x512.jpg" alt="Bandeau LinkedIn V6">
+            </picture>
+        </div>
+
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/Epargner-1024x249.webp" type="image/webp">
+                <img src="./media/Epargner-1024x249.jpg" alt="Image Épargner">
+            </picture>
+        </div>
+
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/fdSide-963x1024.webp" type="image/webp">
+                <img src="./media/fdSide-963x1024.jpg" alt="Image fdSide">
+            </picture>
+        </div>
+
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/fisca-min-scaled-e1718877227639-726x726.webp" type="image/webp">
+                <img src="./media/fisca-min-scaled-e1718877227639-726x726.jpg" alt="Image Fisca">
+            </picture>
+        </div>
+
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/HEADER-1350x506-MULTI-Frais-V3.webp" type="image/webp">
+                <img src="./media/HEADER-1350x506-MULTI-Frais-V3.jpg" alt="Header Multi-Frais V3">
+            </picture>
+        </div>
+
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/LOG-PER-2024-e1750146476381.webp" type="image/webp">
+                <img src="./media/LOG-PER-2024-e1750146476381.jpg" alt="Logo PER 2024">
+            </picture>
+        </div>
+
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/logo_medicis.webp" type="image/webp">
+                <img src="./media/logo_medicis.jpg" alt="Logo Médicis">
+            </picture>
+        </div>
+
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/magazine-227x300.webp" type="image/webp">
+                <img src="./media/magazine-227x300.jpg" alt="Magazine">
+            </picture>
+        </div>
+
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/Medicis-partenaire-de-la-42eme-edition-du-concours-Un-des-Meilleurs-Apprentis-bouchers-de-France_large.webp" type="image/webp">
+                <img src="./media/Medicis-partenaire-de-la-42eme-edition-du-concours-Un-des-Meilleurs-Apprentis-bouchers-de-France_large.jpg" alt="Partenariat Médicis avec le concours de bouchers">
+            </picture>
+        </div>
+
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/ORGANIGRAMME-V1.webp" type="image/webp">
+                <img src="./media/ORGANIGRAMME-V1.jpg" alt="Organigramme V1">
+            </picture>
+        </div>
+
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/Portrait-Ambassadeur-STEPHANIE-HEIN-v2-300dpi-RVB-DIGITAL-©pierrickguidou-scaled.webp" type="image/webp">
+                <img src="./media/Portrait-Ambassadeur-STEPHANIE-HEIN-v2-300dpi-RVB-DIGITAL-©pierrickguidou-scaled.jpg" alt="Portrait Ambassadeur STEPHANIE HEIN">
+            </picture>
+        </div>
+
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/Portraits-pour-site-791x9655-1.webp" type="image/webp">
+                <img src="./media/Portraits-pour-site-791x9655-1.jpg" alt="Portraits pour site 791x9655-1">
+            </picture>
+        </div>
+
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/Portraits-pour-site-965x791-V3.webp" type="image/webp">
+                <img src="./media/Portraits-pour-site-965x791-V3.jpg" alt="Portraits pour site 965x791-V3">
+            </picture>
+        </div>
+
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1022397055.webp" type="image/webp">
+                <img src="./media/shutterstock_1022397055.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1050327191.webp" type="image/webp">
+                <img src="./media/shutterstock_1050327191.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1090265960-1.webp" type="image/webp">
+                <img src="./media/shutterstock_1090265960-1.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1095088970.webp" type="image/webp">
+                <img src="./media/shutterstock_1095088970.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1096148960.webp" type="image/webp">
+                <img src="./media/shutterstock_1096148960.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1107796946.webp" type="image/webp">
+                <img src="./media/shutterstock_1107796946.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1108176035.webp" type="image/webp">
+                <img src="./media/shutterstock_1108176035.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1123967615.webp" type="image/webp">
+                <img src="./media/shutterstock_1123967615.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1147644074.webp" type="image/webp">
+                <img src="./media/shutterstock_1147644074.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1178530654.webp" type="image/webp">
+                <img src="./media/shutterstock_1178530654.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1190270668.webp" type="image/webp">
+                <img src="./media/shutterstock_1190270668.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_119209738.webp" type="image/webp">
+                <img src="./media/shutterstock_119209738.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1227962455.webp" type="image/webp">
+                <img src="./media/shutterstock_1227962455.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1240244536-1.webp" type="image/webp">
+                <img src="./media/shutterstock_1240244536-1.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1259521639 (1).webp" type="image/webp">
+                <img src="./media/shutterstock_1259521639 (1).jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1272613333.webp" type="image/webp">
+                <img src="./media/shutterstock_1272613333.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1283682703.webp" type="image/webp">
+                <img src="./media/shutterstock_1283682703.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1287543364.webp" type="image/webp">
+                <img src="./media/shutterstock_1287543364.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1313016566.webp" type="image/webp">
+                <img src="./media/shutterstock_1313016566.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1323592877.webp" type="image/webp">
+                <img src="./media/shutterstock_1323592877.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1347873452.webp" type="image/webp">
+                <img src="./media/shutterstock_1347873452.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1350370946.webp" type="image/webp">
+                <img src="./media/shutterstock_1350370946.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1410490520.webp" type="image/webp">
+                <img src="./media/shutterstock_1410490520.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1414318691-1 (1).webp" type="image/webp">
+                <img src="./media/shutterstock_1414318691-1 (1).jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_142346170.webp" type="image/webp">
+                <img src="./media/shutterstock_142346170.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1476944915 (1).webp" type="image/webp">
+                <img src="./media/shutterstock_1476944915 (1).jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1477334027.webp" type="image/webp">
+                <img src="./media/shutterstock_1477334027.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1518005579.webp" type="image/webp">
+                <img src="./media/shutterstock_1518005579.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1523326748.webp" type="image/webp">
+                <img src="./media/shutterstock_1523326748.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_168915590-1.webp" type="image/webp">
+                <img src="./media/shutterstock_168915590-1.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_248781373.webp" type="image/webp">
+                <img src="./media/shutterstock_248781373.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_272996756.webp" type="image/webp">
+                <img src="./media/shutterstock_272996756.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_273533168-1.webp" type="image/webp">
+                <img src="./media/shutterstock_273533168-1.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_274062995.webp" type="image/webp">
+                <img src="./media/shutterstock_274062995.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_280391933.webp" type="image/webp">
+                <img src="./media/shutterstock_280391933.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_282601322.webp" type="image/webp">
+                <img src="./media/shutterstock_282601322.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_282680441.webp" type="image/webp">
+                <img src="./media/shutterstock_282680441.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_315652577-1-1.webp" type="image/webp">
+                <img src="./media/shutterstock_315652577-1-1.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_319147016-1.webp" type="image/webp">
+                <img src="./media/shutterstock_319147016-1.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_325434353.webp" type="image/webp">
+                <img src="./media/shutterstock_325434353.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_335560283-1.webp" type="image/webp">
+                <img src="./media/shutterstock_335560283-1.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_353979281.webp" type="image/webp">
+                <img src="./media/shutterstock_353979281.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_367776686.webp" type="image/webp">
+                <img src="./media/shutterstock_367776686.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_370034096.webp" type="image/webp">
+                <img src="./media/shutterstock_370034096.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_383000008.webp" type="image/webp">
+                <img src="./media/shutterstock_383000008.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_393500332.webp" type="image/webp">
+                <img src="./media/shutterstock_393500332.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_394637827 (1).webp" type="image/webp">
+                <img src="./media/shutterstock_394637827 (1).jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_397574752.webp" type="image/webp">
+                <img src="./media/shutterstock_397574752.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_398181373.webp" type="image/webp">
+                <img src="./media/shutterstock_398181373.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_442602781-1024x724.webp" type="image/webp">
+                <img src="./media/shutterstock_442602781-1024x724.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_487666249.webp" type="image/webp">
+                <img src="./media/shutterstock_487666249.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_492204427.webp" type="image/webp">
+                <img src="./media/shutterstock_492204427.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_519076771.webp" type="image/webp">
+                <img src="./media/shutterstock_519076771.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_521445166.webp" type="image/webp">
+                <img src="./media/shutterstock_521445166.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_528642268-1.webp" type="image/webp">
+                <img src="./media/shutterstock_528642268-1.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_552942724.webp" type="image/webp">
+                <img src="./media/shutterstock_552942724.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_552961762.webp" type="image/webp">
+                <img src="./media/shutterstock_552961762.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_552964717.webp" type="image/webp">
+                <img src="./media/shutterstock_552964717.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_553640041.webp" type="image/webp">
+                <img src="./media/shutterstock_553640041.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_569391748.webp" type="image/webp">
+                <img src="./media/shutterstock_569391748.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_574839037.webp" type="image/webp">
+                <img src="./media/shutterstock_574839037.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_583813837 (1).webp" type="image/webp">
+                <img src="./media/shutterstock_583813837 (1).jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_609134795.webp" type="image/webp">
+                <img src="./media/shutterstock_609134795.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_613400372.webp" type="image/webp">
+                <img src="./media/shutterstock_613400372.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_64618879.webp" type="image/webp">
+                <img src="./media/shutterstock_64618879.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_650549434.webp" type="image/webp">
+                <img src="./media/shutterstock_650549434.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_653340904.webp" type="image/webp">
+                <img src="./media/shutterstock_653340904.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_662175937.webp" type="image/webp">
+                <img src="./media/shutterstock_662175937.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_665117635.webp" type="image/webp">
+                <img src="./media/shutterstock_665117635.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_718155163-1.webp" type="image/webp">
+                <img src="./media/shutterstock_718155163-1.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_750073606 (1).webp" type="image/webp">
+                <img src="./media/shutterstock_750073606 (1).jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_759262096-1 (1).webp" type="image/webp">
+                <img src="./media/shutterstock_759262096-1 (1).jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_790043215.webp" type="image/webp">
+                <img src="./media/shutterstock_790043215.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_795200827.webp" type="image/webp">
+                <img src="./media/shutterstock_795200827.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_795596305.webp" type="image/webp">
+                <img src="./media/shutterstock_795596305.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1556335889-1.webp" type="image/webp">
+                <img src="./media/shutterstock_1556335889-1.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1562373757.webp" type="image/webp">
+                <img src="./media/shutterstock_1562373757.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1574160505-1-1.webp" type="image/webp">
+                <img src="./media/shutterstock_1574160505-1-1.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1583839540.webp" type="image/webp">
+                <img src="./media/shutterstock_1583839540.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1596318619.webp" type="image/webp">
+                <img src="./media/shutterstock_1596318619.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1634225833.webp" type="image/webp">
+                <img src="./media/shutterstock_1634225833.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1667342674-1-1024x683 (1).webp" type="image/webp">
+                <img src="./media/shutterstock_1667342674-1-1024x683 (1).jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1673456497 (1).webp" type="image/webp">
+                <img src="./media/shutterstock_1673456497 (1).jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1674467302.webp" type="image/webp">
+                <img src="./media/shutterstock_1674467302.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1712082700.webp" type="image/webp">
+                <img src="./media/shutterstock_1712082700.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1739514032.webp" type="image/webp">
+                <img src="./media/shutterstock_1739514032.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1746174551.webp" type="image/webp">
+                <img src="./media/shutterstock_1746174551.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1753400729.webp" type="image/webp">
+                <img src="./media/shutterstock_1753400729.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1761099719.webp" type="image/webp">
+                <img src="./media/shutterstock_1761099719.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1767236018.webp" type="image/webp">
+                <img src="./media/shutterstock_1767236018.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1769355341-1-e1722262656304.webp" type="image/webp">
+                <img src="./media/shutterstock_1769355341-1-e1722262656304.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1776559202.webp" type="image/webp">
+                <img src="./media/shutterstock_1776559202.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1786572482.webp" type="image/webp">
+                <img src="./media/shutterstock_1786572482.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1787769857 (1).webp" type="image/webp">
+                <img src="./media/shutterstock_1787769857 (1).jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1810945423-1.webp" type="image/webp">
+                <img src="./media/shutterstock_1810945423-1.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1818524411.webp" type="image/webp">
+                <img src="./media/shutterstock_1818524411.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1831476568.webp" type="image/webp">
+                <img src="./media/shutterstock_1831476568.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1840295068.webp" type="image/webp">
+                <img src="./media/shutterstock_1840295068.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1848067771-1.webp" type="image/webp">
+                <img src="./media/shutterstock_1848067771-1.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1854582151 (1).webp" type="image/webp">
+                <img src="./media/shutterstock_1854582151 (1).jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1865153395-e1722256838303.webp" type="image/webp">
+                <img src="./media/shutterstock_1865153395-e1722256838303.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1886794300.webp" type="image/webp">
+                <img src="./media/shutterstock_1886794300.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1886794318 (1).webp" type="image/webp">
+                <img src="./media/shutterstock_1886794318 (1).jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1891084123.webp" type="image/webp">
+                <img src="./media/shutterstock_1891084123.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1901019469.webp" type="image/webp">
+                <img src="./media/shutterstock_1901019469.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1906238344.webp" type="image/webp">
+                <img src="./media/shutterstock_1906238344.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1912220356.webp" type="image/webp">
+                <img src="./media/shutterstock_1912220356.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1921610339.webp" type="image/webp">
+                <img src="./media/shutterstock_1921610339.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1930917869.webp" type="image/webp">
+                <img src="./media/shutterstock_1930917869.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1936256302.webp" type="image/webp">
+                <img src="./media/shutterstock_1936256302.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1940409892.webp" type="image/webp">
+                <img src="./media/shutterstock_1940409892.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1946033428.webp" type="image/webp">
+                <img src="./media/shutterstock_1946033428.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1980892214 (1).webp" type="image/webp">
+                <img src="./media/shutterstock_1980892214 (1).jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_1982273024.webp" type="image/webp">
+                <img src="./media/shutterstock_1982273024.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2006570741.webp" type="image/webp">
+                <img src="./media/shutterstock_2006570741.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2040223886.webp" type="image/webp">
+                <img src="./media/shutterstock_2040223886.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2062727135 (1).webp" type="image/webp">
+                <img src="./media/shutterstock_2062727135 (1).jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2068226957 (1).webp" type="image/webp">
+                <img src="./media/shutterstock_2068226957 (1).jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2070352892.webp" type="image/webp">
+                <img src="./media/shutterstock_2070352892.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2083529695.webp" type="image/webp">
+                <img src="./media/shutterstock_2083529695.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2103182843.webp" type="image/webp">
+                <img src="./media/shutterstock_2103182843.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2116991546-min-2-1-1024x683.webp" type="image/webp">
+                <img src="./media/shutterstock_2116991546-min-2-1-1024x683.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2122700972.webp" type="image/webp">
+                <img src="./media/shutterstock_2122700972.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2133003171.webp" type="image/webp">
+                <img src="./media/shutterstock_2133003171.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2151109213.webp" type="image/webp">
+                <img src="./media/shutterstock_2151109213.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2160612727.webp" type="image/webp">
+                <img src="./media/shutterstock_2160612727.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2162088077.webp" type="image/webp">
+                <img src="./media/shutterstock_2162088077.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2165594437.webp" type="image/webp">
+                <img src="./media/shutterstock_2165594437.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2179789139.webp" type="image/webp">
+                <img src="./media/shutterstock_2179789139.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2179883581.webp" type="image/webp">
+                <img src="./media/shutterstock_2179883581.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2230165195-1.webp" type="image/webp">
+                <img src="./media/shutterstock_2230165195-1.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2265474701.webp" type="image/webp">
+                <img src="./media/shutterstock_2265474701.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2273030147-1 (1).webp" type="image/webp">
+                <img src="./media/shutterstock_2273030147-1 (1).jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2323639897.webp" type="image/webp">
+                <img src="./media/shutterstock_2323639897.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2330422109.webp" type="image/webp">
+                <img src="./media/shutterstock_2330422109.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2467633055-scaled.webp" type="image/webp">
+                <img src="./media/shutterstock_2467633055-scaled.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2467669143-1024x1024.webp" type="image/webp">
+                <img src="./media/shutterstock_2467669143-1024x1024.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2476951115.webp" type="image/webp">
+                <img src="./media/shutterstock_2476951115.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2506806499-1-1024x683.webp" type="image/webp">
+                <img src="./media/shutterstock_2506806499-1-1024x683.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/shutterstock_2514993657-1024x683.webp" type="image/webp">
+                <img src="./media/shutterstock_2514993657-1024x683.jpg" alt="Photo Shutterstock">
+            </picture>
+        </div>
+
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/SnapInsta.to_274564112_1168010873936347_8035060754367053165_n.webp" type="image/webp">
+                <img src="./media/SnapInsta.to_274564112_1168010873936347_8035060754367053165_n.jpg" alt="Capture Instagram">
+            </picture>
+        </div>
+
+        <div class="media-item">
+            <picture>
+                <source srcset="./media/Visuel-pour-actu-site-1024x683.webp" type="image/webp">
+                <img src="./media/Visuel-pour-actu-site-1024x683.jpg" alt="Visuel pour actualité site">
+            </picture>
+        </div>
+
+    </main>
     <footer>
         <p>© 2025 LNA Prototypes. Tous droits réservés.</p>
     </footer>
