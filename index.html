@@ -3,13 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma Galerie d'Images (Dynamique)</title>
+    <title>Ma Galerie d'Images LNA Prototypes (Statique)</title>
     
-    <link rel="stylesheet" href="style.css">
-    
-    <script>
-        const BASE_URL = './media/'; 
-    </script>
+    <style>
+        /* Style du corps de la page */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+
+        /* Style de l'en-tête */
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #fff; /* Fond blanc pour le titre */
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin: 0;
+        }
+
+        /* Style de la grille de la mosaïque */
+        .gallery-grid {
+            display: grid;
+            /* Crée des colonnes flexibles (min 250px) pour s'adapter à l'écran */
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px; /* Espace entre les images */
+            padding: 20px;
+            max-width: 1400px; /* Limite la largeur du contenu */
+            margin: 0 auto; /* Centre la grille */
+        }
+
+        /* Conteneur de chaque image */
+        .media-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            aspect-ratio: 1 / 1; /* Force le conteneur à être carré (Mosaïque uniforme) */
+        }
+
+        /* Styles des images à l'intérieur */
+        .media-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Assure que l'image couvre l'espace sans se déformer */
+            display: block;
+            /* Prépare la transition pour l'effet de zoom */
+            transition: transform 0.3s ease; 
+        }
+
+        /* Effet interactif : Zoom léger au survol (hover) */
+        .media-item:hover img {
+            transform: scale(1.05); /* Agrandissement de 5% */
+            cursor: pointer; /* Change le curseur pour indiquer l'interactivité */
+        }
+
+        /* Style du pied de page (footer) */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
 
@@ -18,12 +80,1425 @@
     </header>
 
     <main class="gallery-grid">
+        
+        <div class="media-item">
+            <img src="./media/2022_MVMA_inscription_gallery-2.webp" alt="Image de la galerie : 2022_MVMA_inscription_gallery-2.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/Affiche_2023_FDP_carre_Insta-e1725973409812.jpg" alt="Image de la galerie : Affiche_2023_FDP_carre_Insta-e1725973409812.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/ambassador4-min-min-min-scaled-1-e1721749371203.webp" alt="Image de la galerie : ambassador4-min-min-min-scaled-1-e1721749371203.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/ambassador5-min.webp" alt="Image de la galerie : ambassador5-min.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/ambassador-min-scaled.webp" alt="Image de la galerie : ambassador-min-scaled.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/atout-1-min-1024x692.webp" alt="Image de la galerie : atout-1-min-1024x692.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/avantage-.png" alt="Image de la galerie : avantage-.png">
+        </div>
+        <div class="media-item">
+            <img src="./media/Bail-reel-solidaire-d-activite-pour-les-micro-entreprises-scaled.webp" alt="Image de la galerie : Bail-reel-solidaire-d-activite-pour-les-micro-entreprises-scaled.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/BANNIERE_MEDICIS_PER-MEDICIS-MULTISUPPORT_2025-1020x1024.webp" alt="Image de la galerie : BANNIERE_MEDICIS_PER-MEDICIS-MULTISUPPORT_2025-1020x1024.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/bg-footerQuestion.webp" alt="Image de la galerie : bg-footerQuestion.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/bgForm (1).webp" alt="Image de la galerie : bgForm (1).webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/BOUCHER2-1024x800 (1).jpg" alt="Image de la galerie : BOUCHER2-1024x800 (1).jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/Boulangerie-scaled.jpg" alt="Image de la galerie : Boulangerie-scaled.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/Boulangerie-scaled-e1729008613624-1024x608.jpg" alt="Image de la galerie : Boulangerie-scaled-e1729008613624-1024x608.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/Cancer-logo-1-1024x561.png" alt="Image de la galerie : Cancer-logo-1-1024x561.png">
+        </div>
+        <div class="media-item">
+            <img src="./media/Capture-decran-2024-07-04-104343.webp" alt="Image de la galerie : Capture-decran-2024-07-04-104343.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/Capture-decran-2024-07-24-165536-e1721832998137.png" alt="Image de la galerie : Capture-decran-2024-07-24-165536-e1721832998137.png">
+        </div>
+        <div class="media-item">
+            <img src="./media/Capture-decran-2025-02-13-164907.png" alt="Image de la galerie : Capture-decran-2025-02-13-164907.png">
+        </div>
+        <div class="media-item">
+            <img src="./media/conseil-2023-scaled.jpg" alt="Image de la galerie : conseil-2023-scaled.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/conseil-2023-scaled-e1725972551523.jpg" alt="Image de la galerie : conseil-2023-scaled-e1725972551523.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/croissance-durable.webp" alt="Image de la galerie : croissance-durable.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/Croissance.webp" alt="Image de la galerie : Croissance.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC03487.webp" alt="Image de la galerie : DSC03487.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC03898full.jpg" alt="Image de la galerie : DSC03898full.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04068.webp" alt="Image de la galerie : DSC04068.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04077.webp" alt="Image de la galerie : DSC04077.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04179.webp" alt="Image de la galerie : DSC04179.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04207.webp" alt="Image de la galerie : DSC04207.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04212.webp" alt="Image de la galerie : DSC04212.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04222.webp" alt="Image de la galerie : DSC04222.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04358.webp" alt="Image de la galerie : DSC04358.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04374.webp" alt="Image de la galerie : DSC04374.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04456.webp" alt="Image de la galerie : DSC04456.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04523.webp" alt="Image de la galerie : DSC04523.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04576.webp" alt="Image de la galerie : DSC04576.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04620.webp" alt="Image de la galerie : DSC04620.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04639.webp" alt="Image de la galerie : DSC04639.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04670.webp" alt="Image de la galerie : DSC04670.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04732.webp" alt="Image de la galerie : DSC04732.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04803.webp" alt="Image de la galerie : DSC04803.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04820.webp" alt="Image de la galerie : DSC04820.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04907.webp" alt="Image de la galerie : DSC04907.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC04944.webp" alt="Image de la galerie : DSC04944.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05007.webp" alt="Image de la galerie : DSC05007.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05047.webp" alt="Image de la galerie : DSC05047.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05089.webp" alt="Image de la galerie : DSC05089.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05156.webp" alt="Image de la galerie : DSC05156.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05232.webp" alt="Image de la galerie : DSC05232.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05256.webp" alt="Image de la galerie : DSC05256.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05282.webp" alt="Image de la galerie : DSC05282.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05352.webp" alt="Image de la galerie : DSC05352.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05391.webp" alt="Image de la galerie : DSC05391.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05417.webp" alt="Image de la galerie : DSC05417.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05445.webp" alt="Image de la galerie : DSC05445.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05476.webp" alt="Image de la galerie : DSC05476.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05504.webp" alt="Image de la galerie : DSC05504.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05537.webp" alt="Image de la galerie : DSC05537.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05622.webp" alt="Image de la galerie : DSC05622.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05658.webp" alt="Image de la galerie : DSC05658.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05721.webp" alt="Image de la galerie : DSC05721.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05763.webp" alt="Image de la galerie : DSC05763.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05809.webp" alt="Image de la galerie : DSC05809.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05834.webp" alt="Image de la galerie : DSC05834.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05898.webp" alt="Image de la galerie : DSC05898.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05934.webp" alt="Image de la galerie : DSC05934.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC05963.webp" alt="Image de la galerie : DSC05963.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06013.webp" alt="Image de la galerie : DSC06013.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06044.webp" alt="Image de la galerie : DSC06044.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06079.webp" alt="Image de la galerie : DSC06079.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06114.webp" alt="Image de la galerie : DSC06114.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06173.webp" alt="Image de la galerie : DSC06173.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06206.webp" alt="Image de la galerie : DSC06206.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06240.webp" alt="Image de la galerie : DSC06240.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06277.webp" alt="Image de la galerie : DSC06277.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06316.webp" alt="Image de la galerie : DSC06316.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06346.webp" alt="Image de la galerie : DSC06346.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06376.webp" alt="Image de la galerie : DSC06376.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06406.webp" alt="Image de la galerie : DSC06406.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06422.webp" alt="Image de la galerie : DSC06422.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06456.webp" alt="Image de la galerie : DSC06456.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06509.webp" alt="Image de la galerie : DSC06509.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06554.webp" alt="Image de la galerie : DSC06554.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06583.webp" alt="Image de la galerie : DSC06583.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06604.webp" alt="Image de la galerie : DSC06604.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06626.webp" alt="Image de la galerie : DSC06626.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06655.webp" alt="Image de la galerie : DSC06655.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06674.webp" alt="Image de la galerie : DSC06674.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06703.webp" alt="Image de la galerie : DSC06703.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06740.webp" alt="Image de la galerie : DSC06740.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06771.webp" alt="Image de la galerie : DSC06771.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06803.webp" alt="Image de la galerie : DSC06803.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06836.webp" alt="Image de la galerie : DSC06836.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06866.webp" alt="Image de la galerie : DSC06866.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06898.webp" alt="Image de la galerie : DSC06898.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06932.webp" alt="Image de la galerie : DSC06932.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06967.webp" alt="Image de la galerie : DSC06967.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC06992.webp" alt="Image de la galerie : DSC06992.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07018.webp" alt="Image de la galerie : DSC07018.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07049.webp" alt="Image de la galerie : DSC07049.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07079.webp" alt="Image de la galerie : DSC07079.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07122.webp" alt="Image de la galerie : DSC07122.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07166.webp" alt="Image de la galerie : DSC07166.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07198.webp" alt="Image de la galerie : DSC07198.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07223.webp" alt="Image de la galerie : DSC07223.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07248.webp" alt="Image de la galerie : DSC07248.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07283.webp" alt="Image de la galerie : DSC07283.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07315.webp" alt="Image de la galerie : DSC07315.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07361.webp" alt="Image de la galerie : DSC07361.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07400.webp" alt="Image de la galerie : DSC07400.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07455.webp" alt="Image de la galerie : DSC07455.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07504.webp" alt="Image de la galerie : DSC07504.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07548.webp" alt="Image de la galerie : DSC07548.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07590.webp" alt="Image de la galerie : DSC07590.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07629.webp" alt="Image de la galerie : DSC07629.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07671.webp" alt="Image de la galerie : DSC07671.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07705.webp" alt="Image de la galerie : DSC07705.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07739.webp" alt="Image de la galerie : DSC07739.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07775.webp" alt="Image de la galerie : DSC07775.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07817.webp" alt="Image de la galerie : DSC07817.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07849.webp" alt="Image de la galerie : DSC07849.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07886.webp" alt="Image de la galerie : DSC07886.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07936.webp" alt="Image de la galerie : DSC07936.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC07971.webp" alt="Image de la galerie : DSC07971.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08006.webp" alt="Image de la galerie : DSC08006.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08035.webp" alt="Image de la galerie : DSC08035.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08075.webp" alt="Image de la galerie : DSC08075.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08107.webp" alt="Image de la galerie : DSC08107.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08139.webp" alt="Image de la galerie : DSC08139.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08173.webp" alt="Image de la galerie : DSC08173.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08204.webp" alt="Image de la galerie : DSC08204.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08246.webp" alt="Image de la galerie : DSC08246.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08283.webp" alt="Image de la galerie : DSC08283.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08316.webp" alt="Image de la galerie : DSC08316.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08346.webp" alt="Image de la galerie : DSC08346.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08390.webp" alt="Image de la galerie : DSC08390.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08425.webp" alt="Image de la galerie : DSC08425.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08465.webp" alt="Image de la galerie : DSC08465.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08500.webp" alt="Image de la galerie : DSC08500.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08534.webp" alt="Image de la galerie : DSC08534.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08569.webp" alt="Image de la galerie : DSC08569.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08602.webp" alt="Image de la galerie : DSC08602.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08643.webp" alt="Image de la galerie : DSC08643.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08678.webp" alt="Image de la galerie : DSC08678.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08722.webp" alt="Image de la galerie : DSC08722.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08761.webp" alt="Image de la galerie : DSC08761.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08801.webp" alt="Image de la galerie : DSC08801.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08836.webp" alt="Image de la galerie : DSC08836.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08871.webp" alt="Image de la galerie : DSC08871.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08906.webp" alt="Image de la galerie : DSC08906.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08948.webp" alt="Image de la galerie : DSC08948.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC08984.webp" alt="Image de la galerie : DSC08984.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09015.webp" alt="Image de la galerie : DSC09015.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09045.webp" alt="Image de la galerie : DSC09045.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09087.webp" alt="Image de la galerie : DSC09087.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09123.webp" alt="Image de la galerie : DSC09123.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09164.webp" alt="Image de la galerie : DSC09164.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09197.webp" alt="Image de la galerie : DSC09197.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09228.webp" alt="Image de la galerie : DSC09228.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09265.webp" alt="Image de la galerie : DSC09265.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09299.webp" alt="Image de la galerie : DSC09299.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09337.webp" alt="Image de la galerie : DSC09337.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09375.webp" alt="Image de la galerie : DSC09375.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09413.webp" alt="Image de la galerie : DSC09413.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09458.webp" alt="Image de la galerie : DSC09458.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09503.webp" alt="Image de la galerie : DSC09503.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09540.webp" alt="Image de la galerie : DSC09540.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09569.webp" alt="Image de la galerie : DSC09569.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09605.webp" alt="Image de la galerie : DSC09605.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09641.webp" alt="Image de la galerie : DSC09641.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09673.webp" alt="Image de la galerie : DSC09673.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09706.webp" alt="Image de la galerie : DSC09706.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09736.webp" alt="Image de la galerie : DSC09736.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09772.webp" alt="Image de la galerie : DSC09772.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09804.webp" alt="Image de la galerie : DSC09804.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09836.webp" alt="Image de la galerie : DSC09836.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09869.webp" alt="Image de la galerie : DSC09869.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09903.webp" alt="Image de la galerie : DSC09903.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09939.webp" alt="Image de la galerie : DSC09939.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/DSC09975.webp" alt="Image de la galerie : DSC09975.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/Étude.webp" alt="Image de la galerie : Étude.webp">
+        </div>
+        <div class="media-item">
+            <img src="./media/Formation-min-scaled.jpg" alt="Image de la galerie : Formation-min-scaled.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/Formation-min-scaled-e1725972584139.jpg" alt="Image de la galerie : Formation-min-scaled-e1725972584139.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/header-carriere-medicis.jpg" alt="Image de la galerie : header-carriere-medicis.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0004.jpg" alt="Image de la galerie : IMG-20230209-WA0004.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0005.jpg" alt="Image de la galerie : IMG-20230209-WA0005.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0006.jpg" alt="Image de la galerie : IMG-20230209-WA0006.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0007.jpg" alt="Image de la galerie : IMG-20230209-WA0007.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0008.jpg" alt="Image de la galerie : IMG-20230209-WA0008.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0009.jpg" alt="Image de la galerie : IMG-20230209-WA0009.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0010.jpg" alt="Image de la galerie : IMG-20230209-WA0010.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0011.jpg" alt="Image de la galerie : IMG-20230209-WA0011.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0012.jpg" alt="Image de la galerie : IMG-20230209-WA0012.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0013.jpg" alt="Image de la galerie : IMG-20230209-WA0013.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0014.jpg" alt="Image de la galerie : IMG-20230209-WA0014.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0015.jpg" alt="Image de la galerie : IMG-20230209-WA0015.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0016.jpg" alt="Image de la galerie : IMG-20230209-WA0016.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0017.jpg" alt="Image de la galerie : IMG-20230209-WA0017.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0018.jpg" alt="Image de la galerie : IMG-20230209-WA0018.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0019.jpg" alt="Image de la galerie : IMG-20230209-WA0019.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0020.jpg" alt="Image de la galerie : IMG-20230209-WA0020.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0021.jpg" alt="Image de la galerie : IMG-20230209-WA0021.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0022.jpg" alt="Image de la galerie : IMG-20230209-WA0022.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0023.jpg" alt="Image de la galerie : IMG-20230209-WA0023.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0024.jpg" alt="Image de la galerie : IMG-20230209-WA0024.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0025.jpg" alt="Image de la galerie : IMG-20230209-WA0025.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0026.jpg" alt="Image de la galerie : IMG-20230209-WA0026.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0027.jpg" alt="Image de la galerie : IMG-20230209-WA0027.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0028.jpg" alt="Image de la galerie : IMG-20230209-WA0028.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0029.jpg" alt="Image de la galerie : IMG-20230209-WA0029.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0030.jpg" alt="Image de la galerie : IMG-20230209-WA0030.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0031.jpg" alt="Image de la galerie : IMG-20230209-WA0031.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0032.jpg" alt="Image de la galerie : IMG-20230209-WA0032.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0033.jpg" alt="Image de la galerie : IMG-20230209-WA0033.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0034.jpg" alt="Image de la galerie : IMG-20230209-WA0034.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0035.jpg" alt="Image de la galerie : IMG-20230209-WA0035.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0036.jpg" alt="Image de la galerie : IMG-20230209-WA0036.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0037.jpg" alt="Image de la galerie : IMG-20230209-WA0037.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0038.jpg" alt="Image de la galerie : IMG-20230209-WA0038.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0039.jpg" alt="Image de la galerie : IMG-20230209-WA0039.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0040.jpg" alt="Image de la galerie : IMG-20230209-WA0040.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0041.jpg" alt="Image de la galerie : IMG-20230209-WA0041.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0042.jpg" alt="Image de la galerie : IMG-20230209-WA0042.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0043.jpg" alt="Image de la galerie : IMG-20230209-WA0043.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0044.jpg" alt="Image de la galerie : IMG-20230209-WA0044.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0045.jpg" alt="Image de la galerie : IMG-20230209-WA0045.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0046.jpg" alt="Image de la galerie : IMG-20230209-WA0046.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0047.jpg" alt="Image de la galerie : IMG-20230209-WA0047.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0048.jpg" alt="Image de la galerie : IMG-20230209-WA0048.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0049.jpg" alt="Image de la galerie : IMG-20230209-WA0049.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0050.jpg" alt="Image de la galerie : IMG-20230209-WA0050.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0051.jpg" alt="Image de la galerie : IMG-20230209-WA0051.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0052.jpg" alt="Image de la galerie : IMG-20230209-WA0052.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0053.jpg" alt="Image de la galerie : IMG-20230209-WA0053.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0054.jpg" alt="Image de la galerie : IMG-20230209-WA0054.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0055.jpg" alt="Image de la galerie : IMG-20230209-WA0055.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0056.jpg" alt="Image de la galerie : IMG-20230209-WA0056.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0057.jpg" alt="Image de la galerie : IMG-20230209-WA0057.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0058.jpg" alt="Image de la galerie : IMG-20230209-WA0058.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0059.jpg" alt="Image de la galerie : IMG-20230209-WA0059.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0060.jpg" alt="Image de la galerie : IMG-20230209-WA0060.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0061.jpg" alt="Image de la galerie : IMG-20230209-WA0061.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0062.jpg" alt="Image de la galerie : IMG-20230209-WA0062.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0063.jpg" alt="Image de la galerie : IMG-20230209-WA0063.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0064.jpg" alt="Image de la galerie : IMG-20230209-WA0064.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0065.jpg" alt="Image de la galerie : IMG-20230209-WA0065.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0066.jpg" alt="Image de la galerie : IMG-20230209-WA0066.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0067.jpg" alt="Image de la galerie : IMG-20230209-WA0067.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0068.jpg" alt="Image de la galerie : IMG-20230209-WA0068.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0069.jpg" alt="Image de la galerie : IMG-20230209-WA0069.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0070.jpg" alt="Image de la galerie : IMG-20230209-WA0070.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0071.jpg" alt="Image de la galerie : IMG-20230209-WA0071.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0072.jpg" alt="Image de la galerie : IMG-20230209-WA0072.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0073.jpg" alt="Image de la galerie : IMG-20230209-WA0073.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0074.jpg" alt="Image de la galerie : IMG-20230209-WA0074.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0075.jpg" alt="Image de la galerie : IMG-20230209-WA0075.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0076.jpg" alt="Image de la galerie : IMG-20230209-WA0076.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0077.jpg" alt="Image de la galerie : IMG-20230209-WA0077.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0078.jpg" alt="Image de la galerie : IMG-20230209-WA0078.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0079.jpg" alt="Image de la galerie : IMG-20230209-WA0079.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0080.jpg" alt="Image de la galerie : IMG-20230209-WA0080.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0081.jpg" alt="Image de la galerie : IMG-20230209-WA0081.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0082.jpg" alt="Image de la galerie : IMG-20230209-WA0082.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0083.jpg" alt="Image de la galerie : IMG-20230209-WA0083.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0084.jpg" alt="Image de la galerie : IMG-20230209-WA0084.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0085.jpg" alt="Image de la galerie : IMG-20230209-WA0085.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0086.jpg" alt="Image de la galerie : IMG-20230209-WA0086.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0087.jpg" alt="Image de la galerie : IMG-20230209-WA0087.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0088.jpg" alt="Image de la galerie : IMG-20230209-WA0088.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0089.jpg" alt="Image de la galerie : IMG-20230209-WA0089.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0090.jpg" alt="Image de la galerie : IMG-20230209-WA0090.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0091.jpg" alt="Image de la galerie : IMG-20230209-WA0091.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0092.jpg" alt="Image de la galerie : IMG-20230209-WA0092.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0093.jpg" alt="Image de la galerie : IMG-20230209-WA0093.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0094.jpg" alt="Image de la galerie : IMG-20230209-WA0094.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0095.jpg" alt="Image de la galerie : IMG-20230209-WA0095.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0096.jpg" alt="Image de la galerie : IMG-20230209-WA0096.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0097.jpg" alt="Image de la galerie : IMG-20230209-WA0097.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0098.jpg" alt="Image de la galerie : IMG-20230209-WA0098.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0099.jpg" alt="Image de la galerie : IMG-20230209-WA0099.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0100.jpg" alt="Image de la galerie : IMG-20230209-WA0100.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0101.jpg" alt="Image de la galerie : IMG-20230209-WA0101.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0102.jpg" alt="Image de la galerie : IMG-20230209-WA0102.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0103.jpg" alt="Image de la galerie : IMG-20230209-WA0103.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0104.jpg" alt="Image de la galerie : IMG-20230209-WA0104.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0105.jpg" alt="Image de la galerie : IMG-20230209-WA0105.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0106.jpg" alt="Image de la galerie : IMG-20230209-WA0106.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0107.jpg" alt="Image de la galerie : IMG-20230209-WA0107.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0108.jpg" alt="Image de la galerie : IMG-20230209-WA0108.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0109.jpg" alt="Image de la galerie : IMG-20230209-WA0109.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0110.jpg" alt="Image de la galerie : IMG-20230209-WA0110.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0111.jpg" alt="Image de la galerie : IMG-20230209-WA0111.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0112.jpg" alt="Image de la galerie : IMG-20230209-WA0112.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0113.jpg" alt="Image de la galerie : IMG-20230209-WA0113.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0114.jpg" alt="Image de la galerie : IMG-20230209-WA0114.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0115.jpg" alt="Image de la galerie : IMG-20230209-WA0115.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0116.jpg" alt="Image de la galerie : IMG-20230209-WA0116.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0117.jpg" alt="Image de la galerie : IMG-20230209-WA0117.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0118.jpg" alt="Image de la galerie : IMG-20230209-WA0118.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0119.jpg" alt="Image de la galerie : IMG-20230209-WA0119.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0120.jpg" alt="Image de la galerie : IMG-20230209-WA0120.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0121.jpg" alt="Image de la galerie : IMG-20230209-WA0121.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0122.jpg" alt="Image de la galerie : IMG-20230209-WA0122.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0123.jpg" alt="Image de la galerie : IMG-20230209-WA0123.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0124.jpg" alt="Image de la galerie : IMG-20230209-WA0124.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0125.jpg" alt="Image de la galerie : IMG-20230209-WA0125.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0126.jpg" alt="Image de la galerie : IMG-20230209-WA0126.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0127.jpg" alt="Image de la galerie : IMG-20230209-WA0127.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0128.jpg" alt="Image de la galerie : IMG-20230209-WA0128.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0129.jpg" alt="Image de la galerie : IMG-20230209-WA0129.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0130.jpg" alt="Image de la galerie : IMG-20230209-WA0130.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0131.jpg" alt="Image de la galerie : IMG-20230209-WA0131.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0132.jpg" alt="Image de la galerie : IMG-20230209-WA0132.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0133.jpg" alt="Image de la galerie : IMG-20230209-WA0133.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0134.jpg" alt="Image de la galerie : IMG-20230209-WA0134.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0135.jpg" alt="Image de la galerie : IMG-20230209-WA0135.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0136.jpg" alt="Image de la galerie : IMG-20230209-WA0136.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0137.jpg" alt="Image de la galerie : IMG-20230209-WA0137.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0138.jpg" alt="Image de la galerie : IMG-20230209-WA0138.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0139.jpg" alt="Image de la galerie : IMG-20230209-WA0139.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0140.jpg" alt="Image de la galerie : IMG-20230209-WA0140.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0141.jpg" alt="Image de la galerie : IMG-20230209-WA0141.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0142.jpg" alt="Image de la galerie : IMG-20230209-WA0142.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0143.jpg" alt="Image de la galerie : IMG-20230209-WA0143.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0144.jpg" alt="Image de la galerie : IMG-20230209-WA0144.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0145.jpg" alt="Image de la galerie : IMG-20230209-WA0145.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0146.jpg" alt="Image de la galerie : IMG-20230209-WA0146.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0147.jpg" alt="Image de la galerie : IMG-20230209-WA0147.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0148.jpg" alt="Image de la galerie : IMG-20230209-WA0148.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0149.jpg" alt="Image de la galerie : IMG-20230209-WA0149.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0150.jpg" alt="Image de la galerie : IMG-20230209-WA0150.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0151.jpg" alt="Image de la galerie : IMG-20230209-WA0151.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0152.jpg" alt="Image de la galerie : IMG-20230209-WA0152.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0153.jpg" alt="Image de la galerie : IMG-20230209-WA0153.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0154.jpg" alt="Image de la galerie : IMG-20230209-WA0154.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0155.jpg" alt="Image de la galerie : IMG-20230209-WA0155.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0156.jpg" alt="Image de la galerie : IMG-20230209-WA0156.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0157.jpg" alt="Image de la galerie : IMG-20230209-WA0157.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0158.jpg" alt="Image de la galerie : IMG-20230209-WA0158.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0159.jpg" alt="Image de la galerie : IMG-20230209-WA0159.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0160.jpg" alt="Image de la galerie : IMG-20230209-WA0160.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0161.jpg" alt="Image de la galerie : IMG-20230209-WA0161.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0162.jpg" alt="Image de la galerie : IMG-20230209-WA0162.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0163.jpg" alt="Image de la galerie : IMG-20230209-WA0163.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0164.jpg" alt="Image de la galerie : IMG-20230209-WA0164.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0165.jpg" alt="Image de la galerie : IMG-20230209-WA0165.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0166.jpg" alt="Image de la galerie : IMG-20230209-WA0166.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0167.jpg" alt="Image de la galerie : IMG-20230209-WA0167.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0168.jpg" alt="Image de la galerie : IMG-20230209-WA0168.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0169.jpg" alt="Image de la galerie : IMG-20230209-WA0169.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0170.jpg" alt="Image de la galerie : IMG-20230209-WA0170.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0171.jpg" alt="Image de la galerie : IMG-20230209-WA0171.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0172.jpg" alt="Image de la galerie : IMG-20230209-WA0172.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0173.jpg" alt="Image de la galerie : IMG-20230209-WA0173.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0174.jpg" alt="Image de la galerie : IMG-20230209-WA0174.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0175.jpg" alt="Image de la galerie : IMG-20230209-WA0175.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0176.jpg" alt="Image de la galerie : IMG-20230209-WA0176.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0177.jpg" alt="Image de la galerie : IMG-20230209-WA0177.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0178.jpg" alt="Image de la galerie : IMG-20230209-WA0178.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0179.jpg" alt="Image de la galerie : IMG-20230209-WA0179.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0180.jpg" alt="Image de la galerie : IMG-20230209-WA0180.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0181.jpg" alt="Image de la galerie : IMG-20230209-WA0181.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0182.jpg" alt="Image de la galerie : IMG-20230209-WA0182.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0183.jpg" alt="Image de la galerie : IMG-20230209-WA0183.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0184.jpg" alt="Image de la galerie : IMG-20230209-WA0184.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0185.jpg" alt="Image de la galerie : IMG-20230209-WA0185.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0186.jpg" alt="Image de la galerie : IMG-20230209-WA0186.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0187.jpg" alt="Image de la galerie : IMG-20230209-WA0187.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0188.jpg" alt="Image de la galerie : IMG-20230209-WA0188.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0189.jpg" alt="Image de la galerie : IMG-20230209-WA0189.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0190.jpg" alt="Image de la galerie : IMG-20230209-WA0190.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0191.jpg" alt="Image de la galerie : IMG-20230209-WA0191.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0192.jpg" alt="Image de la galerie : IMG-20230209-WA0192.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0193.jpg" alt="Image de la galerie : IMG-20230209-WA0193.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0194.jpg" alt="Image de la galerie : IMG-20230209-WA0194.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0195.jpg" alt="Image de la galerie : IMG-20230209-WA0195.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0196.jpg" alt="Image de la galerie : IMG-20230209-WA0196.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0197.jpg" alt="Image de la galerie : IMG-20230209-WA0197.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0198.jpg" alt="Image de la galerie : IMG-20230209-WA0198.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0199.jpg" alt="Image de la galerie : IMG-20230209-WA0199.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0200.jpg" alt="Image de la galerie : IMG-20230209-WA0200.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0201.jpg" alt="Image de la galerie : IMG-20230209-WA0201.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0202.jpg" alt="Image de la galerie : IMG-20230209-WA0202.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0203.jpg" alt="Image de la galerie : IMG-20230209-WA0203.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0204.jpg" alt="Image de la galerie : IMG-20230209-WA0204.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0205.jpg" alt="Image de la galerie : IMG-20230209-WA0205.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0206.jpg" alt="Image de la galerie : IMG-20230209-WA0206.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0207.jpg" alt="Image de la galerie : IMG-20230209-WA0207.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0208.jpg" alt="Image de la galerie : IMG-20230209-WA0208.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0209.jpg" alt="Image de la galerie : IMG-20230209-WA0209.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0210.jpg" alt="Image de la galerie : IMG-20230209-WA0210.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0211.jpg" alt="Image de la galerie : IMG-20230209-WA0211.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0212.jpg" alt="Image de la galerie : IMG-20230209-WA0212.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0213.jpg" alt="Image de la galerie : IMG-20230209-WA0213.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0214.jpg" alt="Image de la galerie : IMG-20230209-WA0214.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0215.jpg" alt="Image de la galerie : IMG-20230209-WA0215.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0216.jpg" alt="Image de la galerie : IMG-20230209-WA0216.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0217.jpg" alt="Image de la galerie : IMG-20230209-WA0217.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0218.jpg" alt="Image de la galerie : IMG-20230209-WA0218.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0219.jpg" alt="Image de la galerie : IMG-20230209-WA0219.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0220.jpg" alt="Image de la galerie : IMG-20230209-WA0220.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0221.jpg" alt="Image de la galerie : IMG-20230209-WA0221.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0222.jpg" alt="Image de la galerie : IMG-20230209-WA0222.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0223.jpg" alt="Image de la galerie : IMG-20230209-WA0223.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0224.jpg" alt="Image de la galerie : IMG-20230209-WA0224.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0225.jpg" alt="Image de la galerie : IMG-20230209-WA0225.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0226.jpg" alt="Image de la galerie : IMG-20230209-WA0226.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0227.jpg" alt="Image de la galerie : IMG-20230209-WA0227.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0228.jpg" alt="Image de la galerie : IMG-20230209-WA0228.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0229.jpg" alt="Image de la galerie : IMG-20230209-WA0229.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0230.jpg" alt="Image de la galerie : IMG-20230209-WA0230.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0231.jpg" alt="Image de la galerie : IMG-20230209-WA0231.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0232.jpg" alt="Image de la galerie : IMG-20230209-WA0232.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0233.jpg" alt="Image de la galerie : IMG-20230209-WA0233.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0234.jpg" alt="Image de la galerie : IMG-20230209-WA0234.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0235.jpg" alt="Image de la galerie : IMG-20230209-WA0235.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0236.jpg" alt="Image de la galerie : IMG-20230209-WA0236.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0237.jpg" alt="Image de la galerie : IMG-20230209-WA0237.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0238.jpg" alt="Image de la galerie : IMG-20230209-WA0238.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0239.jpg" alt="Image de la galerie : IMG-20230209-WA0239.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0240.jpg" alt="Image de la galerie : IMG-20230209-WA0240.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0241.jpg" alt="Image de la galerie : IMG-20230209-WA0241.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0242.jpg" alt="Image de la galerie : IMG-20230209-WA0242.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0243.jpg" alt="Image de la galerie : IMG-20230209-WA0243.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0244.jpg" alt="Image de la galerie : IMG-20230209-WA0244.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0245.jpg" alt="Image de la galerie : IMG-20230209-WA0245.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0246.jpg" alt="Image de la galerie : IMG-20230209-WA0246.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0247.jpg" alt="Image de la galerie : IMG-20230209-WA0247.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0248.jpg" alt="Image de la galerie : IMG-20230209-WA0248.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0249.jpg" alt="Image de la galerie : IMG-20230209-WA0249.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0250.jpg" alt="Image de la galerie : IMG-20230209-WA0250.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0251.jpg" alt="Image de la galerie : IMG-20230209-WA0251.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0252.jpg" alt="Image de la galerie : IMG-20230209-WA0252.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0253.jpg" alt="Image de la galerie : IMG-20230209-WA0253.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0254.jpg" alt="Image de la galerie : IMG-20230209-WA0254.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0255.jpg" alt="Image de la galerie : IMG-20230209-WA0255.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0256.jpg" alt="Image de la galerie : IMG-20230209-WA0256.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0257.jpg" alt="Image de la galerie : IMG-20230209-WA0257.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0258.jpg" alt="Image de la galerie : IMG-20230209-WA0258.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0259.jpg" alt="Image de la galerie : IMG-20230209-WA0259.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0260.jpg" alt="Image de la galerie : IMG-20230209-WA0260.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0261.jpg" alt="Image de la galerie : IMG-20230209-WA0261.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0262.jpg" alt="Image de la galerie : IMG-20230209-WA0262.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0263.jpg" alt="Image de la galerie : IMG-20230209-WA0263.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0264.jpg" alt="Image de la galerie : IMG-20230209-WA0264.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0265.jpg" alt="Image de la galerie : IMG-20230209-WA0265.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0266.jpg" alt="Image de la galerie : IMG-20230209-WA0266.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0267.jpg" alt="Image de la galerie : IMG-20230209-WA0267.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0268.jpg" alt="Image de la galerie : IMG-20230209-WA0268.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0269.jpg" alt="Image de la galerie : IMG-20230209-WA0269.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0270.jpg" alt="Image de la galerie : IMG-20230209-WA0270.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0271.jpg" alt="Image de la galerie : IMG-20230209-WA0271.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0272.jpg" alt="Image de la galerie : IMG-20230209-WA0272.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0273.jpg" alt="Image de la galerie : IMG-20230209-WA0273.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0274.jpg" alt="Image de la galerie : IMG-20230209-WA0274.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0275.jpg" alt="Image de la galerie : IMG-20230209-WA0275.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0276.jpg" alt="Image de la galerie : IMG-20230209-WA0276.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0277.jpg" alt="Image de la galerie : IMG-20230209-WA0277.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0278.jpg" alt="Image de la galerie : IMG-20230209-WA0278.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0279.jpg" alt="Image de la galerie : IMG-20230209-WA0279.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0280.jpg" alt="Image de la galerie : IMG-20230209-WA0280.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0281.jpg" alt="Image de la galerie : IMG-20230209-WA0281.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0282.jpg" alt="Image de la galerie : IMG-20230209-WA0282.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0283.jpg" alt="Image de la galerie : IMG-20230209-WA0283.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/IMG-20230209-WA0284.jpg" alt="Image de la galerie : IMG-20230209-WA0284.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/SnapInsta.to_344933930_165431639832733_42858163087077920775_174430455380730135_n.jpg" alt="Image de la galerie : SnapInsta.to_344933930_165431639832733_42858163087077920775_174430455380730135_n.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/SnapInsta.to_328090391_2996126370683122_5328676227859705699_n.jpg" alt="Image de la galerie : SnapInsta.to_328090391_2996126370683122_5328676227859705699_n.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/SnapInsta.to_318189127_693736588767019_625180091618538224_n.jpg" alt="Image de la galerie : SnapInsta.to_318189127_693736588767019_625180091618538224_n.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/SnapInsta.to_316712069_227576506269104_7118887484828167743_n.jpg" alt="Image de la galerie : SnapInsta.to_316712069_227576506269104_7118887484828167743_n.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/SnapInsta.to_311150845_461024746003281_3554911379810772402_n.jpg" alt="Image de la galerie : SnapInsta.to_311150845_461024746003281_3554911379810772402_n.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/SnapInsta.to_275577783_501683134654621_1479778349936452333_n.jpg" alt="Image de la galerie : SnapInsta.to_275577783_501683134654621_1479778349936452333_n.jpg">
+        </div>
+        <div class="media-item">
+            <img src="./media/SnapInsta.to_274564112_1168010873936347_8035060754367053165_n.jpg" alt="Image de la galerie : SnapInsta.to_274564112_1168010873936347_8035060754367053165_n.jpg">
+        </div>
         </main>
     
     <footer>
-        <p>&copy; 2025. Galerie générée dynamiquement.</p>
+        <p>&copy; 2025. Galerie statique.</p>
     </footer>
 
-    <script src="gallery.js"></script>
 </body>
 </html>
