@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Médicis - Portfolio</title>
-    
+    <title>Médicis - Portfolio (Mode Débug)</title>
     <style>
         /* Style du corps de la page */
         body {
@@ -13,57 +12,48 @@
             padding: 0;
             background-color: #f0f2f5;
         }
-
         /* Style de l'en-tête */
         header {
             text-align: center;
             padding: 20px 0;
-            background-color: #fff; /* Fond blanc pour le titre */
+            background-color: #fff;
             border-bottom: 1px solid #ddd;
             margin-bottom: 20px;
         }
-
         h1 {
             color: #333;
             margin: 0;
         }
-
         /* Style de la grille de la mosaïque */
         .gallery-grid {
             display: grid;
-            /* Crée des colonnes flexibles (min 250px) pour s'adapter à l'écran */
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px; /* Espace entre les images */
+            gap: 15px;
             padding: 20px;
-            max-width: 1400px; /* Limite la largeur du contenu */
-            margin: 0 auto; /* Centre la grille */
+            max-width: 1400px;
+            margin: 0 auto;
         }
-
         /* Conteneur de chaque image */
         .media-item {
             background-color: #fff;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            aspect-ratio: 1 / 1; /* Force le conteneur à être carré (Mosaïque uniforme) */
+            aspect-ratio: 1 / 1;
         }
-
-        /* Styles des images à l'intérieur (ciblera le <img> dans la balise <picture>) */
+        /* Styles des images à l'intérieur */
         .media-item img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Assure que l'image couvre l'espace sans se déformer */
+            object-fit: cover;
             display: block;
-            /* Prépare la transition pour l'effet de zoom */
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
-
         /* Effet interactif : Zoom léger au survol (hover) */
         .media-item:hover img {
-            transform: scale(1.05); /* Agrandissement de 5% */
-            cursor: pointer; /* Change le curseur pour indiquer l'interactivité */
+            transform: scale(1.05);
+            cursor: pointer;
         }
-
         /* Style du pied de page (footer) */
         footer {
             text-align: center;
@@ -74,72 +64,42 @@
     </style>
 </head>
 <body>
-
     <header>
-        <h1>Images de LNA Prototypes (Galerie Portfolio)</h1>
+        <h1>Images de LNA Prototypes (Galerie Portfolio - Version JPG SEULE)</h1>
     </header>
-
     <main class="gallery-grid">
-        
         <div class="media-item">
-            <picture>
-                <source srcset="./media/2022_MVMA_inscription_gallery-2.webp" type="image/webp">
-                <img src="./media/2022_MVMA_inscription_gallery-2.jpg" alt="Inscription galerie 2022">
-            </picture>
+            <img src="./media/2022_MVMA_inscription_gallery-2.jpg" alt="Inscription galerie 2022">
         </div>
         <div class="media-item">
             <img src="./media/Affiche_2023_FDP_carre_Insta-e1725973409812.jpg" alt="Affiche Instagram 2023">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/ambassador4-min-min-min-scaled-1-e1721749371203.webp" type="image/webp">
-                <img src="./media/ambassador4-min-min-min-scaled-1-e1721749371203.jpg" alt="Ambassadeur photo 4">
-            </picture>
+            <img src="./media/ambassador4-min-min-min-scaled-1-e1721749371203.jpg" alt="Ambassadeur photo 4">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/ambassador5-min.webp" type="image/webp">
-                <img src="./media/ambassador5-min.jpg" alt="Ambassadeur photo 5">
-            </picture>
+            <img src="./media/ambassador5-min.jpg" alt="Ambassadeur photo 5">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/ambassador-min-scaled.webp" type="image/webp">
-                <img src="./media/ambassador-min-scaled.jpg" alt="Ambassadeur photo principale">
-            </picture>
+            <img src="./media/ambassador-min-scaled.jpg" alt="Ambassadeur photo principale">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/atout-1-min-1024x692.webp" type="image/webp">
-                <img src="./media/atout-1-min-1024x692.jpg" alt="Atout principal 1">
-            </picture>
+            <img src="./media/atout-1-min-1024x692.jpg" alt="Atout principal 1">
         </div>
         <div class="media-item">
             <img src="./media/avantage-.png" alt="Icône Avantage">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/Bail-reel-solidaire-d-activite-pour-les-micro-entreprises-scaled.webp" type="image/webp">
-                <img src="./media/Bail-reel-solidaire-d-activite-pour-les-micro-entreprises-scaled.jpg" alt="Bail réel solidaire pour micro-entreprises">
-            </picture>
+            <img src="./media/Bail-reel-solidaire-d-activite-pour-les-micro-entreprises-scaled.jpg" alt="Bail réel solidaire pour micro-entreprises">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/BANNIERE_MEDICIS_PER-MEDICIS-MULTISUPPORT_2025-1020x1024.webp" type="image/webp">
-                <img src="./media/BANNIERE_MEDICIS_PER-MEDICIS-MULTISUPPORT_2025-1020x1024.jpg" alt="Bannière PER Médicis Multisapport 2025">
-            </picture>
+            <img src="./media/BANNIERE_MEDICIS_PER-MEDICIS-MULTISUPPORT_2025-1020x1024.jpg" alt="Bannière PER Médicis Multisapport 2025">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/bg-footerQuestion.webp" type="image/webp">
-                <img src="./media/bg-footerQuestion.jpg" alt="Fond de pied de page">
-            </picture>
+            <img src="./media/bg-footerQuestion.jpg" alt="Fond de pied de page">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/bgForm (1).webp" type="image/webp">
-                <img src="./media/bgForm (1).jpg" alt="Fond de formulaire">
-            </picture>
+            <img src="./media/bgForm (1).jpg" alt="Fond de formulaire">
         </div>
         <div class="media-item">
             <img src="./media/BOUCHER2-1024x800 (1).jpg" alt="Photo d'un boucher">
@@ -154,10 +114,7 @@
             <img src="./media/Cancer-logo-1-1024x561.png" alt="Logo Cancer">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/Capture-decran-2024-07-04-104343.webp" type="image/webp">
-                <img src="./media/Capture-decran-2024-07-04-104343.jpg" alt="Capture d'écran 1">
-            </picture>
+            <img src="./media/Capture-decran-2024-07-04-104343.jpg" alt="Capture d'écran 1">
         </div>
         <div class="media-item">
             <img src="./media/Capture-decran-2024-07-24-165536-e1721832998137.png" alt="Capture d'écran 2">
@@ -172,1045 +129,323 @@
             <img src="./media/conseil-2023-scaled-e1725972551523.jpg" alt="Photo de conseil 2023">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/croissance-durable.webp" type="image/webp">
-                <img src="./media/croissance-durable.jpg" alt="Icône de croissance durable">
-            </picture>
+            <img src="./media/croissance-durable.jpg" alt="Icône de croissance durable">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/Croissance.webp" type="image/webp">
-                <img src="./media/Croissance.jpg" alt="Icône de croissance">
-            </picture>
+            <img src="./media/Croissance.jpg" alt="Icône de croissance">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC03487.webp" type="image/webp">
-                <img src="./media/DSC03487.jpg" alt="Photo de galerie DSC03487">
-            </picture>
+            <img src="./media/DSC03487.jpg" alt="Photo de galerie DSC03487">
         </div>
         <div class="media-item">
             <img src="./media/DSC03898full.jpg" alt="Photo de galerie DSC03898">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04068.webp" type="image/webp">
-                <img src="./media/DSC04068.jpg" alt="Photo de galerie DSC04068">
-            </picture>
+            <img src="./media/DSC04068.jpg" alt="Photo de galerie DSC04068">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04077.webp" type="image/webp">
-                <img src="./media/DSC04077.jpg" alt="Photo de galerie DSC04077">
-            </picture>
+            <img src="./media/DSC04077.jpg" alt="Photo de galerie DSC04077">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04179.webp" type="image/webp">
-                <img src="./media/DSC04179.jpg" alt="Photo de galerie DSC04179">
-            </picture>
+            <img src="./media/DSC04179.jpg" alt="Photo de galerie DSC04179">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04207.webp" type="image/webp">
-                <img src="./media/DSC04207.jpg" alt="Photo de galerie DSC04207">
-            </picture>
+            <img src="./media/DSC04207.jpg" alt="Photo de galerie DSC04207">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04212.webp" type="image/webp">
-                <img src="./media/DSC04212.jpg" alt="Photo de galerie DSC04212">
-            </picture>
+            <img src="./media/DSC04212.jpg" alt="Photo de galerie DSC04212">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04222.webp" type="image/webp">
-                <img src="./media/DSC04222.jpg" alt="Photo de galerie DSC04222">
-            </picture>
+            <img src="./media/DSC04222.jpg" alt="Photo de galerie DSC04222">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04358.webp" type="image/webp">
-                <img src="./media/DSC04358.jpg" alt="Photo de galerie DSC04358">
-            </picture>
+            <img src="./media/DSC04358.jpg" alt="Photo de galerie DSC04358">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04374.webp" type="image/webp">
-                <img src="./media/DSC04374.jpg" alt="Photo de galerie DSC04374">
-            </picture>
+            <img src="./media/DSC04374.jpg" alt="Photo de galerie DSC04374">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04456.webp" type="image/webp">
-                <img src="./media/DSC04456.jpg" alt="Photo de galerie DSC04456">
-            </picture>
+            <img src="./media/DSC04456.jpg" alt="Photo de galerie DSC04456">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04523.webp" type="image/webp">
-                <img src="./media/DSC04523.jpg" alt="Photo de galerie DSC04523">
-            </picture>
+            <img src="./media/DSC04523.jpg" alt="Photo de galerie DSC04523">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04576.webp" type="image/webp">
-                <img src="./media/DSC04576.jpg" alt="Photo de galerie DSC04576">
-            </picture>
+            <img src="./media/DSC04576.jpg" alt="Photo de galerie DSC04576">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04620.webp" type="image/webp">
-                <img src="./media/DSC04620.jpg" alt="Photo de galerie DSC04620">
-            </picture>
+            <img src="./media/DSC04620.jpg" alt="Photo de galerie DSC04620">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04639.webp" type="image/webp">
-                <img src="./media/DSC04639.jpg" alt="Photo de galerie DSC04639">
-            </picture>
+            <img src="./media/DSC04639.jpg" alt="Photo de galerie DSC04639">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04670.webp" type="image/webp">
-                <img src="./media/DSC04670.jpg" alt="Photo de galerie DSC04670">
-            </picture>
+            <img src="./media/DSC04670.jpg" alt="Photo de galerie DSC04670">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04732.webp" type="image/webp">
-                <img src="./media/DSC04732.jpg" alt="Photo de galerie DSC04732">
-            </picture>
+            <img src="./media/DSC04732.jpg" alt="Photo de galerie DSC04732">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04803.webp" type="image/webp">
-                <img src="./media/DSC04803.jpg" alt="Photo de galerie DSC04803">
-            </picture>
+            <img src="./media/DSC04803.jpg" alt="Photo de galerie DSC04803">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04820.webp" type="image/webp">
-                <img src="./media/DSC04820.jpg" alt="Photo de galerie DSC04820">
-            </picture>
+            <img src="./media/DSC04820.jpg" alt="Photo de galerie DSC04820">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04907.webp" type="image/webp">
-                <img src="./media/DSC04907.jpg" alt="Photo de galerie DSC04907">
-            </picture>
+            <img src="./media/DSC04907.jpg" alt="Photo de galerie DSC04907">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC04944.webp" type="image/webp">
-                <img src="./media/DSC04944.jpg" alt="Photo de galerie DSC04944">
-            </picture>
+            <img src="./media/DSC04944.jpg" alt="Photo de galerie DSC04944">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05007.webp" type="image/webp">
-                <img src="./media/DSC05007.jpg" alt="Photo de galerie DSC05007">
-            </picture>
+            <img src="./media/DSC05007.jpg" alt="Photo de galerie DSC05007">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05047.webp" type="image/webp">
-                <img src="./media/DSC05047.jpg" alt="Photo de galerie DSC05047">
-            </picture>
+            <img src="./media/DSC05047.jpg" alt="Photo de galerie DSC05047">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05089.webp" type="image/webp">
-                <img src="./media/DSC05089.jpg" alt="Photo de galerie DSC05089">
-            </picture>
+            <img src="./media/DSC05089.jpg" alt="Photo de galerie DSC05089">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05156.webp" type="image/webp">
-                <img src="./media/DSC05156.jpg" alt="Photo de galerie DSC05156">
-            </picture>
+            <img src="./media/DSC05156.jpg" alt="Photo de galerie DSC05156">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05232.webp" type="image/webp">
-                <img src="./media/DSC05232.jpg" alt="Photo de galerie DSC05232">
-            </picture>
+            <img src="./media/DSC05232.jpg" alt="Photo de galerie DSC05232">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05256.webp" type="image/webp">
-                <img src="./media/DSC05256.jpg" alt="Photo de galerie DSC05256">
-            </picture>
+            <img src="./media/DSC05256.jpg" alt="Photo de galerie DSC05256">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05282.webp" type="image/webp">
-                <img src="./media/DSC05282.jpg" alt="Photo de galerie DSC05282">
-            </picture>
+            <img src="./media/DSC05282.jpg" alt="Photo de galerie DSC05282">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05352.webp" type="image/webp">
-                <img src="./media/DSC05352.jpg" alt="Photo de galerie DSC05352">
-            </picture>
+            <img src="./media/DSC05352.jpg" alt="Photo de galerie DSC05352">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05391.webp" type="image/webp">
-                <img src="./media/DSC05391.jpg" alt="Photo de galerie DSC05391">
-            </picture>
+            <img src="./media/DSC05391.jpg" alt="Photo de galerie DSC05391">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05417.webp" type="image/webp">
-                <img src="./media/DSC05417.jpg" alt="Photo de galerie DSC05417">
-            </picture>
+            <img src="./media/DSC05417.jpg" alt="Photo de galerie DSC05417">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05445.webp" type="image/webp">
-                <img src="./media/DSC05445.jpg" alt="Photo de galerie DSC05445">
-            </picture>
+            <img src="./media/DSC05445.jpg" alt="Photo de galerie DSC05445">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05476.webp" type="image/webp">
-                <img src="./media/DSC05476.jpg" alt="Photo de galerie DSC05476">
-            </picture>
+            <img src="./media/DSC05476.jpg" alt="Photo de galerie DSC05476">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05504.webp" type="image/webp">
-                <img src="./media/DSC05504.jpg" alt="Photo de galerie DSC05504">
-            </picture>
+            <img src="./media/DSC05504.jpg" alt="Photo de galerie DSC05504">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05537.webp" type="image/webp">
-                <img src="./media/DSC05537.jpg" alt="Photo de galerie DSC05537">
-            </picture>
+            <img src="./media/DSC05537.jpg" alt="Photo de galerie DSC05537">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05622.webp" type="image/webp">
-                <img src="./media/DSC05622.jpg" alt="Photo de galerie DSC05622">
-            </picture>
+            <img src="./media/DSC05622.jpg" alt="Photo de galerie DSC05622">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05658.webp" type="image/webp">
-                <img src="./media/DSC05658.jpg" alt="Photo de galerie DSC05658">
-            </picture>
+            <img src="./media/DSC05658.jpg" alt="Photo de galerie DSC05658">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05721.webp" type="image/webp">
-                <img src="./media/DSC05721.jpg" alt="Photo de galerie DSC05721">
-            </picture>
+            <img src="./media/DSC05721.jpg" alt="Photo de galerie DSC05721">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05763.webp" type="image/webp">
-                <img src="./media/DSC05763.jpg" alt="Photo de galerie DSC05763">
-            </picture>
+            <img src="./media/DSC05763.jpg" alt="Photo de galerie DSC05763">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05809.webp" type="image/webp">
-                <img src="./media/DSC05809.jpg" alt="Photo de galerie DSC05809">
-            </picture>
+            <img src="./media/DSC05809.jpg" alt="Photo de galerie DSC05809">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05834.webp" type="image/webp">
-                <img src="./media/DSC05834.jpg" alt="Photo de galerie DSC05834">
-            </picture>
+            <img src="./media/DSC05834.jpg" alt="Photo de galerie DSC05834">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05898.webp" type="image/webp">
-                <img src="./media/DSC05898.jpg" alt="Photo de galerie DSC05898">
-            </picture>
+            <img src="./media/DSC05898.jpg" alt="Photo de galerie DSC05898">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05934.webp" type="image/webp">
-                <img src="./media/DSC05934.jpg" alt="Photo de galerie DSC05934">
-            </picture>
+            <img src="./media/DSC05934.jpg" alt="Photo de galerie DSC05934">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC05963.webp" type="image/webp">
-                <img src="./media/DSC05963.jpg" alt="Photo de galerie DSC05963">
-            </picture>
+            <img src="./media/DSC05963.jpg" alt="Photo de galerie DSC05963">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06013.webp" type="image/webp">
-                <img src="./media/DSC06013.jpg" alt="Photo de galerie DSC06013">
-            </picture>
+            <img src="./media/DSC06013.jpg" alt="Photo de galerie DSC06013">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06044.webp" type="image/webp">
-                <img src="./media/DSC06044.jpg" alt="Photo de galerie DSC06044">
-            </picture>
+            <img src="./media/DSC06044.jpg" alt="Photo de galerie DSC06044">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06079.webp" type="image/webp">
-                <img src="./media/DSC06079.jpg" alt="Photo de galerie DSC06079">
-            </picture>
+            <img src="./media/DSC06079.jpg" alt="Photo de galerie DSC06079">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06114.webp" type="image/webp">
-                <img src="./media/DSC06114.jpg" alt="Photo de galerie DSC06114">
-            </picture>
+            <img src="./media/DSC06114.jpg" alt="Photo de galerie DSC06114">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06173.webp" type="image/webp">
-                <img src="./media/DSC06173.jpg" alt="Photo de galerie DSC06173">
-            </picture>
+            <img src="./media/DSC06173.jpg" alt="Photo de galerie DSC06173">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06206.webp" type="image/webp">
-                <img src="./media/DSC06206.jpg" alt="Photo de galerie DSC06206">
-            </picture>
+            <img src="./media/DSC06206.jpg" alt="Photo de galerie DSC06206">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06240.webp" type="image/webp">
-                <img src="./media/DSC06240.jpg" alt="Photo de galerie DSC06240">
-            </picture>
+            <img src="./media/DSC06240.jpg" alt="Photo de galerie DSC06240">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06277.webp" type="image/webp">
-                <img src="./media/DSC06277.jpg" alt="Photo de galerie DSC06277">
-            </picture>
+            <img src="./media/DSC06277.jpg" alt="Photo de galerie DSC06277">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06316.webp" type="image/webp">
-                <img src="./media/DSC06316.jpg" alt="Photo de galerie DSC06316">
-            </picture>
+            <img src="./media/DSC06316.jpg" alt="Photo de galerie DSC06316">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06346.webp" type="image/webp">
-                <img src="./media/DSC06346.jpg" alt="Photo de galerie DSC06346">
-            </picture>
+            <img src="./media/DSC06346.jpg" alt="Photo de galerie DSC06346">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06376.webp" type="image/webp">
-                <img src="./media/DSC06376.jpg" alt="Photo de galerie DSC06376">
-            </picture>
+            <img src="./media/DSC06376.jpg" alt="Photo de galerie DSC06376">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06406.webp" type="image/webp">
-                <img src="./media/DSC06406.jpg" alt="Photo de galerie DSC06406">
-            </picture>
+            <img src="./media/DSC06406.jpg" alt="Photo de galerie DSC06406">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06422.webp" type="image/webp">
-                <img src="./media/DSC06422.jpg" alt="Photo de galerie DSC06422">
-            </picture>
+            <img src="./media/DSC06422.jpg" alt="Photo de galerie DSC06422">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06456.webp" type="image/webp">
-                <img src="./media/DSC06456.jpg" alt="Photo de galerie DSC06456">
-            </picture>
+            <img src="./media/DSC06456.jpg" alt="Photo de galerie DSC06456">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06509.webp" type="image/webp">
-                <img src="./media/DSC06509.jpg" alt="Photo de galerie DSC06509">
-            </picture>
+            <img src="./media/DSC06509.jpg" alt="Photo de galerie DSC06509">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06554.webp" type="image/webp">
-                <img src="./media/DSC06554.jpg" alt="Photo de galerie DSC06554">
-            </picture>
+            <img src="./media/DSC06554.jpg" alt="Photo de galerie DSC06554">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06583.webp" type="image/webp">
-                <img src="./media/DSC06583.jpg" alt="Photo de galerie DSC06583">
-            </picture>
+            <img src="./media/DSC06583.jpg" alt="Photo de galerie DSC06583">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06604.webp" type="image/webp">
-                <img src="./media/DSC06604.jpg" alt="Photo de galerie DSC06604">
-            </picture>
+            <img src="./media/DSC06604.jpg" alt="Photo de galerie DSC06604">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06626.webp" type="image/webp">
-                <img src="./media/DSC06626.jpg" alt="Photo de galerie DSC06626">
-            </picture>
+            <img src="./media/DSC06626.jpg" alt="Photo de galerie DSC06626">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06655.webp" type="image/webp">
-                <img src="./media/DSC06655.jpg" alt="Photo de galerie DSC06655">
-            </picture>
+            <img src="./media/DSC06655.jpg" alt="Photo de galerie DSC06655">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06674.webp" type="image/webp">
-                <img src="./media/DSC06674.jpg" alt="Photo de galerie DSC06674">
-            </picture>
+            <img src="./media/DSC06674.jpg" alt="Photo de galerie DSC06674">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06703.webp" type="image/webp">
-                <img src="./media/DSC06703.jpg" alt="Photo de galerie DSC06703">
-            </picture>
+            <img src="./media/DSC06703.jpg" alt="Photo de galerie DSC06703">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06740.webp" type="image/webp">
-                <img src="./media/DSC06740.jpg" alt="Photo de galerie DSC06740">
-            </picture>
+            <img src="./media/DSC06740.jpg" alt="Photo de galerie DSC06740">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06771.webp" type="image/webp">
-                <img src="./media/DSC06771.jpg" alt="Photo de galerie DSC06771">
-            </picture>
+            <img src="./media/DSC06771.jpg" alt="Photo de galerie DSC06771">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06803.webp" type="image/webp">
-                <img src="./media/DSC06803.jpg" alt="Photo de galerie DSC06803">
-            </picture>
+            <img src="./media/DSC06803.jpg" alt="Photo de galerie DSC06803">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06836.webp" type="image/webp">
-                <img src="./media/DSC06836.jpg" alt="Photo de galerie DSC06836">
-            </picture>
+            <img src="./media/DSC06836.jpg" alt="Photo de galerie DSC06836">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06866.webp" type="image/webp">
-                <img src="./media/DSC06866.jpg" alt="Photo de galerie DSC06866">
-            </picture>
+            <img src="./media/DSC06866.jpg" alt="Photo de galerie DSC06866">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06898.webp" type="image/webp">
-                <img src="./media/DSC06898.jpg" alt="Photo de galerie DSC06898">
-            </picture>
+            <img src="./media/DSC06898.jpg" alt="Photo de galerie DSC06898">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06932.webp" type="image/webp">
-                <img src="./media/DSC06932.jpg" alt="Photo de galerie DSC06932">
-            </picture>
+            <img src="./media/DSC06932.jpg" alt="Photo de galerie DSC06932">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06967.webp" type="image/webp">
-                <img src="./media/DSC06967.jpg" alt="Photo de galerie DSC06967">
-            </picture>
+            <img src="./media/DSC06967.jpg" alt="Photo de galerie DSC06967">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC06992.webp" type="image/webp">
-                <img src="./media/DSC06992.jpg" alt="Photo de galerie DSC06992">
-            </picture>
+            <img src="./media/DSC06992.jpg" alt="Photo de galerie DSC06992">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07018.webp" type="image/webp">
-                <img src="./media/DSC07018.jpg" alt="Photo de galerie DSC07018">
-            </picture>
+            <img src="./media/DSC07018.jpg" alt="Photo de galerie DSC07018">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07049.webp" type="image/webp">
-                <img src="./media/DSC07049.jpg" alt="Photo de galerie DSC07049">
-            </picture>
+            <img src="./media/DSC07049.jpg" alt="Photo de galerie DSC07049">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07079.webp" type="image/webp">
-                <img src="./media/DSC07079.jpg" alt="Photo de galerie DSC07079">
-            </picture>
+            <img src="./media/DSC07079.jpg" alt="Photo de galerie DSC07079">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07122.webp" type="image/webp">
-                <img src="./media/DSC07122.jpg" alt="Photo de galerie DSC07122">
-            </picture>
+            <img src="./media/DSC07122.jpg" alt="Photo de galerie DSC07122">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07166.webp" type="image/webp">
-                <img src="./media/DSC07166.jpg" alt="Photo de galerie DSC07166">
-            </picture>
+            <img src="./media/DSC07166.jpg" alt="Photo de galerie DSC07166">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07198.webp" type="image/webp">
-                <img src="./media/DSC07198.jpg" alt="Photo de galerie DSC07198">
-            </picture>
+            <img src="./media/DSC07198.jpg" alt="Photo de galerie DSC07198">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07223.webp" type="image/webp">
-                <img src="./media/DSC07223.jpg" alt="Photo de galerie DSC07223">
-            </picture>
+            <img src="./media/DSC07223.jpg" alt="Photo de galerie DSC07223">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07248.webp" type="image/webp">
-                <img src="./media/DSC07248.jpg" alt="Photo de galerie DSC07248">
-            </picture>
+            <img src="./media/DSC07248.jpg" alt="Photo de galerie DSC07248">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07283.webp" type="image/webp">
-                <img src="./media/DSC07283.jpg" alt="Photo de galerie DSC07283">
-            </picture>
+            <img src="./media/DSC07283.jpg" alt="Photo de galerie DSC07283">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07315.webp" type="image/webp">
-                <img src="./media/DSC07315.jpg" alt="Photo de galerie DSC07315">
-            </picture>
+            <img src="./media/DSC07315.jpg" alt="Photo de galerie DSC07315">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07361.webp" type="image/webp">
-                <img src="./media/DSC07361.jpg" alt="Photo de galerie DSC07361">
-            </picture>
+            <img src="./media/DSC07361.jpg" alt="Photo de galerie DSC07361">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07400.webp" type="image/webp">
-                <img src="./media/DSC07400.jpg" alt="Photo de galerie DSC07400">
-            </picture>
+            <img src="./media/DSC07400.jpg" alt="Photo de galerie DSC07400">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07455.webp" type="image/webp">
-                <img src="./media/DSC07455.jpg" alt="Photo de galerie DSC07455">
-            </picture>
+            <img src="./media/DSC07455.jpg" alt="Photo de galerie DSC07455">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07504.webp" type="image/webp">
-                <img src="./media/DSC07504.jpg" alt="Photo de galerie DSC07504">
-            </picture>
+            <img src="./media/DSC07504.jpg" alt="Photo de galerie DSC07504">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07548.webp" type="image/webp">
-                <img src="./media/DSC07548.jpg" alt="Photo de galerie DSC07548">
-            </picture>
+            <img src="./media/DSC07548.jpg" alt="Photo de galerie DSC07548">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07590.webp" type="image/webp">
-                <img src="./media/DSC07590.jpg" alt="Photo de galerie DSC07590">
-            </picture>
+            <img src="./media/DSC07590.jpg" alt="Photo de galerie DSC07590">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07629.webp" type="image/webp">
-                <img src="./media/DSC07629.jpg" alt="Photo de galerie DSC07629">
-            </picture>
+            <img src="./media/DSC07629.jpg" alt="Photo de galerie DSC07629">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07671.webp" type="image/webp">
-                <img src="./media/DSC07671.jpg" alt="Photo de galerie DSC07671">
-            </picture>
+            <img src="./media/DSC07671.jpg" alt="Photo de galerie DSC07671">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07705.webp" type="image/webp">
-                <img src="./media/DSC07705.jpg" alt="Photo de galerie DSC07705">
-            </picture>
+            <img src="./media/DSC07705.jpg" alt="Photo de galerie DSC07705">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07739.webp" type="image/webp">
-                <img src="./media/DSC07739.jpg" alt="Photo de galerie DSC07739">
-            </picture>
+            <img src="./media/DSC07739.jpg" alt="Photo de galerie DSC07739">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07775.webp" type="image/webp">
-                <img src="./media/DSC07775.jpg" alt="Photo de galerie DSC07775">
-            </picture>
+            <img src="./media/DSC07775.jpg" alt="Photo de galerie DSC07775">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07817.webp" type="image/webp">
-                <img src="./media/DSC07817.jpg" alt="Photo de galerie DSC07817">
-            </picture>
+            <img src="./media/DSC07817.jpg" alt="Photo de galerie DSC07817">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07849.webp" type="image/webp">
-                <img src="./media/DSC07849.jpg" alt="Photo de galerie DSC07849">
-            </picture>
+            <img src="./media/DSC07849.jpg" alt="Photo de galerie DSC07849">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07886.webp" type="image/webp">
-                <img src="./media/DSC07886.jpg" alt="Photo de galerie DSC07886">
-            </picture>
+            <img src="./media/DSC07886.jpg" alt="Photo de galerie DSC07886">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07936.webp" type="image/webp">
-                <img src="./media/DSC07936.jpg" alt="Photo de galerie DSC07936">
-            </picture>
+            <img src="./media/DSC07936.jpg" alt="Photo de galerie DSC07936">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC07971.webp" type="image/webp">
-                <img src="./media/DSC07971.jpg" alt="Photo de galerie DSC07971">
-            </picture>
+            <img src="./media/DSC07971.jpg" alt="Photo de galerie DSC07971">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08006.webp" type="image/webp">
-                <img src="./media/DSC08006.jpg" alt="Photo de galerie DSC08006">
-            </picture>
+            <img src="./media/DSC08006.jpg" alt="Photo de galerie DSC08006">
         </div>
         <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08035.webp" type="image/webp">
-                <img src="./media/DSC08035.jpg" alt="Photo de galerie DSC08035">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08075.webp" type="image/webp">
-                <img src="./media/DSC08075.jpg" alt="Photo de galerie DSC08075">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08107.webp" type="image/webp">
-                <img src="./media/DSC08107.jpg" alt="Photo de galerie DSC08107">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08139.webp" type="image/webp">
-                <img src="./media/DSC08139.jpg" alt="Photo de galerie DSC08139">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08173.webp" type="image/webp">
-                <img src="./media/DSC08173.jpg" alt="Photo de galerie DSC08173">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08204.webp" type="image/webp">
-                <img src="./media/DSC08204.jpg" alt="Photo de galerie DSC08204">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08246.webp" type="image/webp">
-                <img src="./media/DSC08246.jpg" alt="Photo de galerie DSC08246">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08283.webp" type="image/webp">
-                <img src="./media/DSC08283.jpg" alt="Photo de galerie DSC08283">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08316.webp" type="image/webp">
-                <img src="./media/DSC08316.jpg" alt="Photo de galerie DSC08316">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08346.webp" type="image/webp">
-                <img src="./media/DSC08346.jpg" alt="Photo de galerie DSC08346">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08390.webp" type="image/webp">
-                <img src="./media/DSC08390.jpg" alt="Photo de galerie DSC08390">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08425.webp" type="image/webp">
-                <img src="./media/DSC08425.jpg" alt="Photo de galerie DSC08425">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08465.webp" type="image/webp">
-                <img src="./media/DSC08465.jpg" alt="Photo de galerie DSC08465">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08500.webp" type="image/webp">
-                <img src="./media/DSC08500.jpg" alt="Photo de galerie DSC08500">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08534.webp" type="image/webp">
-                <img src="./media/DSC08534.jpg" alt="Photo de galerie DSC08534">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08569.webp" type="image/webp">
-                <img src="./media/DSC08569.jpg" alt="Photo de galerie DSC08569">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08602.webp" type="image/webp">
-                <img src="./media/DSC08602.jpg" alt="Photo de galerie DSC08602">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08643.webp" type="image/webp">
-                <img src="./media/DSC08643.jpg" alt="Photo de galerie DSC08643">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08678.webp" type="image/webp">
-                <img src="./media/DSC08678.jpg" alt="Photo de galerie DSC08678">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08722.webp" type="image/webp">
-                <img src="./media/DSC08722.jpg" alt="Photo de galerie DSC08722">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08761.webp" type="image/webp">
-                <img src="./media/DSC08761.jpg" alt="Photo de galerie DSC08761">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08801.webp" type="image/webp">
-                <img src="./media/DSC08801.jpg" alt="Photo de galerie DSC08801">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08836.webp" type="image/webp">
-                <img src="./media/DSC08836.jpg" alt="Photo de galerie DSC08836">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08871.webp" type="image/webp">
-                <img src="./media/DSC08871.jpg" alt="Photo de galerie DSC08871">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08906.webp" type="image/webp">
-                <img src="./media/DSC08906.jpg" alt="Photo de galerie DSC08906">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08948.webp" type="image/webp">
-                <img src="./media/DSC08948.jpg" alt="Photo de galerie DSC08948">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC08984.webp" type="image/webp">
-                <img src="./media/DSC08984.jpg" alt="Photo de galerie DSC08984">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09015.webp" type="image/webp">
-                <img src="./media/DSC09015.jpg" alt="Photo de galerie DSC09015">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09045.webp" type="image/webp">
-                <img src="./media/DSC09045.jpg" alt="Photo de galerie DSC09045">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09087.webp" type="image/webp">
-                <img src="./media/DSC09087.jpg" alt="Photo de galerie DSC09087">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09123.webp" type="image/webp">
-                <img src="./media/DSC09123.jpg" alt="Photo de galerie DSC09123">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09164.webp" type="image/webp">
-                <img src="./media/DSC09164.jpg" alt="Photo de galerie DSC09164">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09197.webp" type="image/webp">
-                <img src="./media/DSC09197.jpg" alt="Photo de galerie DSC09197">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09228.webp" type="image/webp">
-                <img src="./media/DSC09228.jpg" alt="Photo de galerie DSC09228">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09265.webp" type="image/webp">
-                <img src="./media/DSC09265.jpg" alt="Photo de galerie DSC09265">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09299.webp" type="image/webp">
-                <img src="./media/DSC09299.jpg" alt="Photo de galerie DSC09299">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09337.webp" type="image/webp">
-                <img src="./media/DSC09337.jpg" alt="Photo de galerie DSC09337">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09375.webp" type="image/webp">
-                <img src="./media/DSC09375.jpg" alt="Photo de galerie DSC09375">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09413.webp" type="image/webp">
-                <img src="./media/DSC09413.jpg" alt="Photo de galerie DSC09413">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09458.webp" type="image/webp">
-                <img src="./media/DSC09458.jpg" alt="Photo de galerie DSC09458">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09503.webp" type="image/webp">
-                <img src="./media/DSC09503.jpg" alt="Photo de galerie DSC09503">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09540.webp" type="image/webp">
-                <img src="./media/DSC09540.jpg" alt="Photo de galerie DSC09540">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09569.webp" type="image/webp">
-                <img src="./media/DSC09569.jpg" alt="Photo de galerie DSC09569">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09605.webp" type="image/webp">
-                <img src="./media/DSC09605.jpg" alt="Photo de galerie DSC09605">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09641.webp" type="image/webp">
-                <img src="./media/DSC09641.jpg" alt="Photo de galerie DSC09641">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09673.webp" type="image/webp">
-                <img src="./media/DSC09673.jpg" alt="Photo de galerie DSC09673">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09706.webp" type="image/webp">
-                <img src="./media/DSC09706.jpg" alt="Photo de galerie DSC09706">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09736.webp" type="image/webp">
-                <img src="./media/DSC09736.jpg" alt="Photo de galerie DSC09736">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09772.webp" type="image/webp">
-                <img src="./media/DSC09772.jpg" alt="Photo de galerie DSC09772">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09804.webp" type="image/webp">
-                <img src="./media/DSC09804.jpg" alt="Photo de galerie DSC09804">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09836.webp" type="image/webp">
-                <img src="./media/DSC09836.jpg" alt="Photo de galerie DSC09836">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09869.webp" type="image/webp">
-                <img src="./media/DSC09869.jpg" alt="Photo de galerie DSC09869">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09903.webp" type="image/webp">
-                <img src="./media/DSC09903.jpg" alt="Photo de galerie DSC09903">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09939.webp" type="image/webp">
-                <img src="./media/DSC09939.jpg" alt="Photo de galerie DSC09939">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/DSC09975.webp" type="image/webp">
-                <img src="./media/DSC09975.jpg" alt="Photo de galerie DSC09975">
-            </picture>
-        </div>
-        <div class="media-item">
-            <picture>
-                <source srcset="./media/Étude.webp" type="image/webp">
-                <img src="./media/Étude.jpg" alt="Icône d'étude">
-            </picture>
-        </div>
-        <div class="media-item">
-            <img src="./media/Formation-min-scaled.jpg" alt="Photo de formation">
-        </div>
-        <div class="media-item">
-            <img src="./media/Formation-min-scaled-e1725972584139.jpg" alt="Photo de formation">
-        </div>
-        <div class="media-item">
-            <img src="./media/header-carriere-medicis.jpg" alt="Bannière carrière Médicis">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0004.jpg" alt="Image WhatsApp 4">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0005.jpg" alt="Image WhatsApp 5">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0006.jpg" alt="Image WhatsApp 6">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0007.jpg" alt="Image WhatsApp 7">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0008.jpg" alt="Image WhatsApp 8">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0009.jpg" alt="Image WhatsApp 9">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0010.jpg" alt="Image WhatsApp 10">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0011.jpg" alt="Image WhatsApp 11">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0012.jpg" alt="Image WhatsApp 12">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0013.jpg" alt="Image WhatsApp 13">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0014.jpg" alt="Image WhatsApp 14">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0015.jpg" alt="Image WhatsApp 15">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0016.jpg" alt="Image WhatsApp 16">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0017.jpg" alt="Image WhatsApp 17">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0018.jpg" alt="Image WhatsApp 18">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0019.jpg" alt="Image WhatsApp 19">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0020.jpg" alt="Image WhatsApp 20">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0021.jpg" alt="Image WhatsApp 21">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0022.jpg" alt="Image WhatsApp 22">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0023.jpg" alt="Image WhatsApp 23">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0024.jpg" alt="Image WhatsApp 24">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0025.jpg" alt="Image WhatsApp 25">
-        </div>
-        <div class="media-item">
-            <img src="./media/IMG-20230209-WA0026.jpg" alt="Image WhatsApp 26">
+            <img src="./media/DSC08035.jpg" alt="Photo de galerie DSC08035">
         </div>
         </main>
-
     <footer>
-        <p>&copy; 2024 Médicis Portfolio. Tous droits réservés.</p>
+        <p>© 2025 LNA Prototypes. Tous droits réservés.</p>
     </footer>
-
 </body>
 </html>
