@@ -46,22 +46,27 @@
       display: block;
     }
 
-    /* ------------------------------------------- */
-/* --- AJOUT POUR L'APERCU EN GRAND FORMAT --- */
-/* ------------------------------------------- */
+/* ------------------------------------------------------------- */
+/* --- CORRECTION POUR L'APERCU EN GRAND FORMAT ET CLIPPING --- */
+/* ------------------------------------------------------------- */
 
-/* Cache la barre de défilement du conteneur parent au survol */
+/* 1. Correction du conteneur : Le conteneur doit permettre à l'image de "sortir" */
 .image-container:hover {
-  /* Assure que l'image miniature ne bouge pas */
-  transform: scale(1);
+  /* **CORRECTION CRUCIALE** : Désactive l'effet de coupure (overflow: hidden) */
+  overflow: visible;
+  /* **CORRECTION CRUCIALE** : Assure que cette tuile est au-dessus de toutes les tuiles voisines */
+  z-index: 10000; 
   /* Optionnel: ajoute un curseur pointeur pour indiquer l'interactivité */
   cursor: pointer;
+  /* Assure que l'image miniature ne bouge pas (peut être retiré si vous n'aviez pas de transform initial) */
+  transform: none; 
 }
 
-/* Crée l'effet de superposition (overlay) pour l'image agrandie */
-.image-container:hover::after {
+/* 2. L'arrière-plan semi-transparent (Overlay) - Utilisation du pseudo-élément ::before */
+/* J'utilise ::before ici pour s'assurer que l'image agrandie (img) est visuellement au-dessus du fond noir */
+.image-container:hover::before {
   content: '';
-  /* Positionnement fixe pour que l'overlay couvre toute la fenêtre (viewport) */
+  /* Positionnement fixe pour qu'il couvre toute la fenêtre (viewport) */
   position: fixed;
   top: 0;
   left: 0;
@@ -69,34 +74,34 @@
   height: 100%;
   /* Fond noir semi-transparent */
   background-color: rgba(0, 0, 0, 0.9);
-  /* Assure que l'overlay est au-dessus de tout le reste */
-  z-index: 1000;
-  /* Désactive les événements de la souris sur l'overlay pour qu'elle se ferme dès qu'on sort du conteneur initial. */
+  /* Doit être juste sous l'image agrandie */
+  z-index: 10001; 
+  /* Désactive les événements de la souris sur l'overlay pour qu'il se ferme */
   pointer-events: none; 
 }
 
-/* La règle clé pour afficher l'image en grand format */
+/* 3. La règle clé pour afficher l'image en grand format */
 .image-container:hover img {
-  /* Annule le object-fit: cover et le positionnement initial de l'image miniature */
+  /* Annule le object-fit: cover de la miniature */
   object-fit: contain; 
   
   /* Positionne l'image agrandie au centre de l'écran (avec un positionnement fixe) */
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* Centrage parfait */
   
   /* Définit la taille maximale pour que l'image tienne dans la fenêtre */
   max-width: 90vw; /* 90% de la largeur du viewport */
   max-height: 90vh; /* 90% de la hauteur du viewport */
-  width: auto; /* Laisse le navigateur gérer la largeur/hauteur en fonction de max-width/height */
+  width: auto;
   height: auto;
   
-  /* L'image agrandie doit être au-dessus du fond semi-transparent */
-  z-index: 1001;
+  /* Doit être au-dessus du fond semi-transparent (z-index: 10001) */
+  z-index: 10002;
   
-  /* Optionnel: ajoute une transition pour une apparition/disparition plus douce */
-  transition: transform 0.3s ease, max-width 0.3s ease;
+  /* **CORRECTION CRUCIALE** : Supprime la transition pour éliminer le mouvement rapide non désiré */
+  transition: none; 
   
   /* L'image est affichée, mais n'est pas censée recevoir les événements souris */
   pointer-events: none; 
