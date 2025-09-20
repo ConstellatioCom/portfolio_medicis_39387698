@@ -47,63 +47,56 @@
     }
 
 /* ------------------------------------------------------------- */
-/* --- CORRECTION POUR L'APERCU EN GRAND FORMAT ET CLIPPING --- */
+/* --- MODIFICATION : APERÇU EN LÉVITATION À CÔTÉ DU CARRÉ --- */
 /* ------------------------------------------------------------- */
 
-/* 1. Correction du conteneur : Le conteneur doit permettre à l'image de "sortir" */
+/* 1. Configuration du conteneur au survol */
 .image-container:hover {
-  /* **CORRECTION CRUCIALE** : Désactive l'effet de coupure (overflow: hidden) */
+  /* Permet à l'image agrandie de sortir du cadre tronqué */
   overflow: visible;
-  /* **CORRECTION CRUCIALE** : Assure que cette tuile est au-dessus de toutes les tuiles voisines */
+  /* Assure que cette tuile et l'image agrandie sont au-dessus de toutes les tuiles voisines */
   z-index: 10000; 
-  /* Optionnel: ajoute un curseur pointeur pour indiquer l'interactivité */
   cursor: pointer;
-  /* Assure que l'image miniature ne bouge pas (peut être retiré si vous n'aviez pas de transform initial) */
+  /* Important : s'assurer que le conteneur lui-même n'est pas transformé */
   transform: none; 
 }
 
-/* 2. L'arrière-plan semi-transparent (Overlay) - Utilisation du pseudo-élément ::before */
-/* J'utilise ::before ici pour s'assurer que l'image agrandie (img) est visuellement au-dessus du fond noir */
+/* 2. Suppression de l'arrière-plan noir (Overlay) */
+/* Nous supprimons le .image-container:hover::before ou ::after qui créait l'écran noir. */
 .image-container:hover::before {
-  content: '';
-  /* Positionnement fixe pour qu'il couvre toute la fenêtre (viewport) */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* Fond noir semi-transparent */
-  background-color: rgba(0, 0, 0, 0.9);
-  /* Doit être juste sous l'image agrandie */
-  z-index: 10001; 
-  /* Désactive les événements de la souris sur l'overlay pour qu'il se ferme */
-  pointer-events: none; 
+    content: none; /* S'assure qu'il n'y a pas d'écran noir */
 }
 
-/* 3. La règle clé pour afficher l'image en grand format */
+
+/* 3. La règle pour afficher l'image en grand format (flottante) */
 .image-container:hover img {
   /* Annule le object-fit: cover de la miniature */
   object-fit: contain; 
   
-  /* Positionne l'image agrandie au centre de l'écran (avec un positionnement fixe) */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centrage parfait */
+  /* Positionnement absolu par rapport au conteneur miniature */
+  position: absolute;
   
-  /* Définit la taille maximale pour que l'image tienne dans la fenêtre */
-  max-width: 90vw; /* 90% de la largeur du viewport */
-  max-height: 90vh; /* 90% de la hauteur du viewport */
-  width: auto;
-  height: auto;
+  /* Positionne l'image agrandie en bas à droite du carré miniature. */
+  /* Ajustez ces valeurs pour la placer où vous voulez (par exemple, à droite ou en bas) */
+  top: 0;
+  left: 105%; /* Décale l'image agrandie de 5% de la largeur du carré vers la droite */
+
+  /* Nous utilisons une grande taille pour la version agrandie */
+  width: 400px; /* Taille fixe, par exemple 400px */
+  height: auto; /* Hauteur ajustée automatiquement */
   
-  /* Doit être au-dessus du fond semi-transparent (z-index: 10001) */
+  /* Garantit qu'elle est au-dessus de tout */
   z-index: 10002;
   
-  /* **CORRECTION CRUCIALE** : Supprime la transition pour éliminer le mouvement rapide non désiré */
+  /* Supprime la transition pour une apparition/disparition immédiate */
   transition: none; 
   
-  /* L'image est affichée, mais n'est pas censée recevoir les événements souris */
+  /* Ajoute une ombre subtile pour l'effet "flottant" */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  /* S'assure que les coins de l'image sont lisses si elle est rectangulaire */
+  border-radius: 8px;
+  
+  /* L'image est affichée et n'est pas censée recevoir les événements souris */
   pointer-events: none; 
 }
   </style>
