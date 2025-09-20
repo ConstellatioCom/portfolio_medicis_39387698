@@ -5,99 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Médicis - Portfolio</title>
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 20px;
-      background-color: #f0f2f5;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #333;
-    }
-    /* La grille responsive */
-    .gallerie {
-      display: grid;
-      /* Colonnes s'ajustent pour que chaque élément ait au moins 250px de largeur */
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 15px;
-      padding: 10px;
-    }
-    /* Conteneur individuel pour garantir un ratio 1:1 (carré) */
-    .image-container {
-      position: relative;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      /* Crée un ratio 1:1 pour les conteneurs */
-      padding-top: 100%;
-      height: 0; 
-    }
-    /* L'image elle-même */
-    .image-container img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      /* Assure que l'image couvre le carré sans être étirée, tout en la coupant si nécessaire */
-      object-fit: cover; 
-      display: block;
-    }
+   <style>
+  body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f0f2f5;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  /* La grille responsive */
+  .gallerie {
+    display: grid;
+    /* Colonnes s'ajustent pour que chaque élément ait au moins 250px de largeur */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 10px;
+    
+    /* *** AJOUT CLÉ 1 : INITIALISATION DU COMPTEUR CSS *** */
+    counter-reset: image-counter;
+  }
+  /* Conteneur individuel pour garantir un ratio 1:1 (carré) */
+  .image-container {
+    position: relative;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Crée un ratio 1:1 pour les conteneurs */
+    padding-top: 100%; /* Important pour le ratio carré */
+  }
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Recouvre entièrement le conteneur en coupant si nécessaire */
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.3s ease;
+  }
 
-/* ------------------------------------------------------------- */
-/* --- CORRECTION : APERÇU CENTRÉ AU-DESSUS DU CARRÉ --- */
-/* ------------------------------------------------------------- */
+  /* ------------------------------------------------------------------ */
+  /* *** AJOUT CLÉ 2 : NUMÉROTATION DES IMAGES *** */
+  /* ------------------------------------------------------------------ */
+  
+  .image-container::after {
+    /* Incrémente le compteur pour chaque conteneur */
+    counter-increment: image-counter; 
+    /* Affiche la valeur du compteur */
+    content: counter(image-counter); 
+    
+    /* Style et positionnement en bas à droite */
+    position: absolute;
+    bottom: 5px; /* Décalage depuis le bas */
+    right: 5px; /* Décalage depuis la droite */
+    
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre semi-transparent */
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+    z-index: 10; /* S'assure qu'il est au-dessus de l'image */
+  }
 
-/* 1. Configuration du conteneur au survol */
-.image-container:hover {
-  /* Permet à l'image agrandie de sortir du cadre tronqué */
-  overflow: visible;
-  /* Assure que cette tuile et l'image agrandie sont au-dessus de toutes les tuiles voisines */
-  z-index: 10000; 
-  cursor: pointer;
-  /* Important : s'assurer que le conteneur lui-même n'est pas transformé */
-  transform: none; 
-}
 
-/* 2. Suppression de l'arrière-plan noir (Overlay) - Inchangé */
-.image-container:hover::before {
-    content: none; 
-}
+  /* ------------------------------------------------------------- */
+  /* --- APERÇU CENTRÉ AU-DESSUS DU CARRÉ (avec corrections) --- */
+  /* ------------------------------------------------------------- */
 
-/* 3. La règle pour afficher l'image en grand format (centrée) */
-.image-container:hover img {
-  /* Annule le object-fit: cover de la miniature */
-  object-fit: contain; 
-  
-  /* Positionnement absolu par rapport au conteneur miniature */
-  position: absolute;
-  
-  /* *** CORRECTION CRUCIALE POUR LE CENTRAGE *** */
-  /* Place le coin supérieur gauche de l'image au centre du conteneur parent */
-  top: 50%;
-  left: 50%; 
-  /* Déplace l'image de 50% de sa propre largeur et hauteur vers l'arrière pour la centrer parfaitement */
-  transform: translate(-50%, -50%); 
+  /* 1. Configuration du conteneur au survol */
+  .image-container:hover {
+    overflow: visible;
+    z-index: 10000; 
+    cursor: pointer;
+    transform: none; 
+  }
 
-  /* Nous utilisons une taille pour la version agrandie */
-  width: 400px; /* Taille fixe, par exemple 400px */
-  height: auto; /* Hauteur ajustée automatiquement */
-  
-  /* Garantit qu'elle est au-dessus de tout */
-  z-index: 10002;
-  
-  /* Supprime la transition pour une apparition/disparition immédiate */
-  transition: none; 
-  
-  /* Ajoute une ombre subtile pour l'effet "flottant" */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
-  
-  /* L'image est affichée, mais n'est pas censée recevoir les événements souris */
-  pointer-events: none; 
-}
+  /* 2. Suppression de l'arrière-plan noir (Overlay) - Utilisation de ::before pour éviter le conflit */
+  /* Nous devons utiliser le pseudo-élément ::before pour cet effet, car ::after est pris par la numérotation. */
+  .image-container:hover::before {
+      content: none; 
+  }
+
+  /* 3. La règle pour afficher l'image en grand format (centrée) */
+  .image-container:hover img {
+    object-fit: contain; 
+    
+    position: absolute;
+    
+    /* Centrage parfait au-dessus du carré miniature */
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+
+    width: 400px;
+    height: auto;
+    
+    z-index: 10002;
+    
+    transition: none; 
+    
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    
+    pointer-events: none; 
+  }
+</style>
   </style>
 </head>
 <body>
