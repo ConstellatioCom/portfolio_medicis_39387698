@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Médicis - Portfolio</title>
- <style>
+<style>
     body {
       font-family: sans-serif;
       margin: 20px;
@@ -23,7 +23,7 @@
       gap: 15px;
       padding: 10px;
       
-      /* 1. Initialisation du compteur */
+      /* Numérotation : Initialisation du compteur */
       counter-reset: image-counter;
     }
     
@@ -33,7 +33,6 @@
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      /* La coupure pour la miniature */
       overflow: hidden; 
       padding-top: 100%;
     }
@@ -46,15 +45,16 @@
       height: 100%;
       object-fit: cover; 
       display: block;
+      /* Conserve la transition de l'état initial, qui sera annulée par le :hover ci-dessous */
       transition: transform 0.3s ease; 
     }
 
     /* ------------------------------------------- */
-    /* --- NUMÉROTATION EN BAS À DROITE (AJOUT) --- */
+    /* --- NUMÉROTATION EN BAS À DROITE --- */
     /* ------------------------------------------- */
     
     .image-container::after {
-      /* 2. Incrémentation et affichage du numéro */
+      /* Incrémentation et affichage du numéro */
       counter-increment: image-counter; 
       content: counter(image-counter); 
       
@@ -73,14 +73,13 @@
       pointer-events: none;
     }
 
-    /* ----------------------------------------------------------------- */
-    /* --- APERÇU FLOTTANT CENTRÉ AU-DESSUS DU CARRÉ (RÉINTÉGRATION) --- */
-    /* ----------------------------------------------------------------- */
+    /* ------------------------------------------------------------- */
+    /* --- APERÇU FLOTTANT CENTRÉ (SANS TRANSLATION AU RETOUR) --- */
+    /* ------------------------------------------------------------- */
 
     .image-container:hover {
       /* Permet à l'image agrandie de sortir du cadre tronqué */
       overflow: visible; 
-      /* Assure que cette tuile est au-dessus de toutes les tuiles voisines */
       z-index: 10000; 
       cursor: pointer;
       transform: none; 
@@ -89,8 +88,6 @@
     /* L'image agrandie centrée */
     .image-container:hover img {
       object-fit: contain; 
-      
-      /* Positionnement absolu par rapport au conteneur miniature */
       position: absolute;
       
       /* Centrage parfait au-dessus du carré miniature */
@@ -104,8 +101,8 @@
       
       z-index: 10002;
       
-      /* Supprime la transition pour éliminer le mouvement rapide */
-      transition: none; 
+      /* 🌟 CORRECTION CLÉ : Supprime toute transition, y compris pour le retour 🌟 */
+      transition: none !important; 
       
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
       border-radius: 8px;
