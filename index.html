@@ -47,7 +47,7 @@
     }
 
 /* ------------------------------------------------------------- */
-/* --- MODIFICATION : APERÇU EN LÉVITATION À CÔTÉ DU CARRÉ --- */
+/* --- CORRECTION : APERÇU CENTRÉ AU-DESSUS DU CARRÉ --- */
 /* ------------------------------------------------------------- */
 
 /* 1. Configuration du conteneur au survol */
@@ -61,14 +61,12 @@
   transform: none; 
 }
 
-/* 2. Suppression de l'arrière-plan noir (Overlay) */
-/* Nous supprimons le .image-container:hover::before ou ::after qui créait l'écran noir. */
+/* 2. Suppression de l'arrière-plan noir (Overlay) - Inchangé */
 .image-container:hover::before {
-    content: none; /* S'assure qu'il n'y a pas d'écran noir */
+    content: none; 
 }
 
-
-/* 3. La règle pour afficher l'image en grand format (flottante) */
+/* 3. La règle pour afficher l'image en grand format (centrée) */
 .image-container:hover img {
   /* Annule le object-fit: cover de la miniature */
   object-fit: contain; 
@@ -76,12 +74,14 @@
   /* Positionnement absolu par rapport au conteneur miniature */
   position: absolute;
   
-  /* Positionne l'image agrandie en bas à droite du carré miniature. */
-  /* Ajustez ces valeurs pour la placer où vous voulez (par exemple, à droite ou en bas) */
-  top: 0;
-  left: 105%; /* Décale l'image agrandie de 5% de la largeur du carré vers la droite */
+  /* *** CORRECTION CRUCIALE POUR LE CENTRAGE *** */
+  /* Place le coin supérieur gauche de l'image au centre du conteneur parent */
+  top: 50%;
+  left: 50%; 
+  /* Déplace l'image de 50% de sa propre largeur et hauteur vers l'arrière pour la centrer parfaitement */
+  transform: translate(-50%, -50%); 
 
-  /* Nous utilisons une grande taille pour la version agrandie */
+  /* Nous utilisons une taille pour la version agrandie */
   width: 400px; /* Taille fixe, par exemple 400px */
   height: auto; /* Hauteur ajustée automatiquement */
   
@@ -93,10 +93,9 @@
   
   /* Ajoute une ombre subtile pour l'effet "flottant" */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  /* S'assure que les coins de l'image sont lisses si elle est rectangulaire */
   border-radius: 8px;
   
-  /* L'image est affichée et n'est pas censée recevoir les événements souris */
+  /* L'image est affichée, mais n'est pas censée recevoir les événements souris */
   pointer-events: none; 
 }
   </style>
