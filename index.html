@@ -45,6 +45,62 @@
       object-fit: cover; 
       display: block;
     }
+
+    /* ------------------------------------------- */
+/* --- AJOUT POUR L'APERCU EN GRAND FORMAT --- */
+/* ------------------------------------------- */
+
+/* Cache la barre de défilement du conteneur parent au survol */
+.image-container:hover {
+  /* Assure que l'image miniature ne bouge pas */
+  transform: scale(1);
+  /* Optionnel: ajoute un curseur pointeur pour indiquer l'interactivité */
+  cursor: pointer;
+}
+
+/* Crée l'effet de superposition (overlay) pour l'image agrandie */
+.image-container:hover::after {
+  content: '';
+  /* Positionnement fixe pour que l'overlay couvre toute la fenêtre (viewport) */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Fond noir semi-transparent */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Assure que l'overlay est au-dessus de tout le reste */
+  z-index: 1000;
+  /* Désactive les événements de la souris sur l'overlay pour qu'elle se ferme dès qu'on sort du conteneur initial. */
+  pointer-events: none; 
+}
+
+/* La règle clé pour afficher l'image en grand format */
+.image-container:hover img {
+  /* Annule le object-fit: cover et le positionnement initial de l'image miniature */
+  object-fit: contain; 
+  
+  /* Positionne l'image agrandie au centre de l'écran (avec un positionnement fixe) */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* Définit la taille maximale pour que l'image tienne dans la fenêtre */
+  max-width: 90vw; /* 90% de la largeur du viewport */
+  max-height: 90vh; /* 90% de la hauteur du viewport */
+  width: auto; /* Laisse le navigateur gérer la largeur/hauteur en fonction de max-width/height */
+  height: auto;
+  
+  /* L'image agrandie doit être au-dessus du fond semi-transparent */
+  z-index: 1001;
+  
+  /* Optionnel: ajoute une transition pour une apparition/disparition plus douce */
+  transition: transform 0.3s ease, max-width 0.3s ease;
+  
+  /* L'image est affichée, mais n'est pas censée recevoir les événements souris */
+  pointer-events: none; 
+}
   </style>
 </head>
 <body>
