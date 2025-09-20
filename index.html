@@ -45,8 +45,9 @@
       height: 100%;
       object-fit: cover; 
       display: block;
-      /* Conserve la transition de l'état initial, qui sera annulée par le :hover ci-dessous */
-      transition: transform 0.3s ease; 
+      
+      /* 🌟 CORRECTION CLÉ : LIGNE DE TRANSITION RETIRÉE ICI 🌟 */
+      /* Ceci empêche toute animation lorsque l'image revient à sa taille miniature. */
     }
 
     /* ------------------------------------------- */
@@ -101,7 +102,7 @@
       
       z-index: 10002;
       
-      /* 🌟 CORRECTION CLÉ : Supprime toute transition, y compris pour le retour 🌟 */
+      /* Suppression de la transition pour la faire apparaître/disparaître instantanément */
       transition: none !important; 
       
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
