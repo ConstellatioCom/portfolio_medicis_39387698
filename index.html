@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Médicis - Portfolio</title>
+<style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background-color: #f0f2f5;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    /* La grille responsive */
+    .gallerie {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 10px;
+      
+      /* Numérotation : Initialisation du compteur */
+      counter-reset: image-counter;
+    }
+    
+    /* Conteneur individuel pour garantir un ratio 1:1 (carré) */
+    .image-container {
+      position: relative;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden; 
+      padding-top: 100%;
+    }
+    
+    .image-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      display: block;
+      
+      /* 🌟 CORRECTION CLÉ : LIGNE DE TRANSITION RETIRÉE ICI 🌟 */
+      /* Ceci empêche toute animation lorsque l'image revient à sa taille miniature. */
+    }
+
+    /* ------------------------------------------- */
+    /* --- NUMÉROTATION EN BAS À DROITE --- */
+    /* ------------------------------------------- */
+    
+    .image-container::after {
+      /* Incrémentation et affichage du numéro */
+      counter-increment: image-counter; 
+      content: counter(image-counter); 
+      
+      position: absolute;
+      bottom: 5px;
+      right: 5px; 
+      
+      background-color: rgba(0, 0, 0, 0.7); 
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 4px;
+      z-index: 10; 
+      
+      pointer-events: none;
+    }
+
+    /* ------------------------------------------------------------- */
+    /* --- APERÇU FLOTTANT CENTRÉ (SANS TRANSLATION AU RETOUR) --- */
+    /* ------------------------------------------------------------- */
+
+    .image-container:hover {
+      /* Permet à l'image agrandie de sortir du cadre tronqué */
+      overflow: visible; 
+      z-index: 10000; 
+      cursor: pointer;
+      transform: none; 
+    }
+
+    /* L'image agrandie centrée */
+    .image-container:hover img {
+      object-fit: contain; 
+      position: absolute;
+      
+      /* Centrage parfait au-dessus du carré miniature */
+      top: 50%;
+      left: 50%; 
+      transform: translate(-50%, -50%); 
+
+      /* Taille de l'aperçu */
+      width: 400px; 
+      height: auto;
+      
+      z-index: 10002;
+      
+      /* Suppression de la transition pour la faire apparaître/disparaître instantanément */
+      transition: none !important; 
+      
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+      
+      pointer-events: none; 
+    }
+</style>
+</head>
+<body>
+  <h1>Médicis - Portfolio</h1>
+  <div class="gallerie">
+  
+    <div class="image-container">
+      <img src="media/ambassador-min-scaled.jpg" alt="Image 3: ambassador min scaled">
+    </div>
+    <div class="image-container">
+      <img src="media/ambassador4-min-min-min-scaled-1-e1721749371203.jpg" alt="Image 4: ambassador4 min min min scaled 1 e1721749371203">
+    </div>
+    <div class="image-container">
+      <img src="media/ambassador5-min.jpg" alt="Image 5: ambassador5 min">
+    </div>
+    <div class="image-container">
+      <img src="media/atout-1-min-1024x692.jpg" alt="Image 6: atout 1 min 1024x692">
+    </div>
+
+    <div class="image-container">
+      <img src="media/Bail-reel-solidaire-d-activite-pour-les-micro-entreprises-scaled.jpg" alt="Image 8: Bail reel solidaire d activite pour les micro entreprises scaled">
+    </div>
+
+    <div class="image-container">
+      <img src="media/bg-footerQuestion.jpg" alt="Image 10: bg footerQuestion">
+    </div>
+  
+    <div class="image-container">
+      <img src="media/fdSide-963x1024.jpg" alt="Image 24: fdSide 963x1024">
+    </div>
+    <div class="image-container">
+      <img src="media/fisca-min-scaled-e1718877227639-726x726.jpg" alt="Image 25: fisca min scaled e1718877227639 726x726">
+    </div>
+    
+    <div class="image-container">
+      <img src="media/Portrait-Ambassadeur-STEPHANIE-HEIN-v2-300dpi-RVB-DIGITAL-©pierrickguidou-scaled.jpg" alt="Image 38: Portrait Ambassadeur STEPHANIE HEIN v2 300dpi RVB DIGITAL ©pierrickguidou scaled">
+    </div>
+    
+  </div>
+</body>
+</html>
